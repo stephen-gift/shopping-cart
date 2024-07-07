@@ -122,8 +122,9 @@ const SCCartSummaryCard = (props: Props) => {
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
+            textDecoration={'none'}
           >
-            <Button as="a">Proceed To Checkout</Button>
+            <Button>Proceed To Checkout</Button>
           </Link>
         </Stack>
       </CardBody>
