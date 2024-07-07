@@ -52,7 +52,9 @@ const SCHeader = (props: Props) => {
     >
       <Flex justifyContent={"center"} alignItems={"center"} gap={5}>
         <Square size={"72px"} display={{ base: "none", md: "flex" }}>
+          <Link href="/">
           <Image src="/images/Logo.png" alt="Logo" />
+          </Link>
         </Square>
         <IconButton
           //   display={{ base: "flex", md: "none" }}
@@ -115,7 +117,7 @@ const SCHeader = (props: Props) => {
             <Flex alignItems="center">
               <Icon as={BiCart} boxSize={5} />
               <Box ml={2} position="absolute" top="-1" right="1">
-                <Text fontSize="xs" fontWeight="bold" color={'red'}>
+                <Text fontSize="xs" fontWeight="bold" color={"red"}>
                   {cart.length > 0 ? `${cart.length}` : "0"}
                 </Text>
               </Box>
@@ -128,7 +130,11 @@ const SCHeader = (props: Props) => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+          <DrawerHeader borderBottomWidth="1px">
+            <Square size={"72px"} display={{ base: "none", md: "flex" }}>
+              <Image src="/images/Logo.png" alt="Logo" />
+            </Square>
+          </DrawerHeader>
           <DrawerBody>
             <IconButton
               display={{ base: "flex", md: "none" }}

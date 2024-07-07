@@ -21,6 +21,7 @@ const SCRemoveFromCart = ({ product }: { product: Product }) => {
       lineHeight={{ base: "12px", md: "16px" }}
       textAlign="left"
       border="0.5px solid #5A2C1799"
+      variant={"none"}
     >
       -
     </Button>

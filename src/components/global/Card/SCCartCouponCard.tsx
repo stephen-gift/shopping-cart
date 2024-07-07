@@ -24,7 +24,7 @@ const SCCartCouponCard = (props: Props) => {
       </CardHeader>
       <CardBody>
         <InputGroup size="md">
-          <Input pr="4.5rem" type={"text"} placeholder="Enter password" />
+          <Input pr="4.5rem" type={"text"} placeholder="Coupon code" />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick} color={'red'} p={1}>
               {clicked ? (

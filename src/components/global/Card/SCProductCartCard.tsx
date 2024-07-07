@@ -19,12 +19,17 @@ import SCAddToCart from "../Button/AddToCart";
 import products from "@/data/products";
 import { Product } from "../../../../types/global";
 import { DeleteIcon } from "@chakra-ui/icons";
+import { deleteProductById } from "@/lib/deleteProductById";
 
 interface ProductCartCardProps {
   product: Product;
+  onDelete: (productId: string) => void; // Callback function for deleting a product
 }
-
-const SCProductCartCard = ({ product }: ProductCartCardProps) => {
+const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
+  const updatedProducts = deleteProductById(products, "2");
+  const handleDelete = () => {
+    onDelete(product.id); // Call onDelete callback with product id
+  };
   return (
     <Card w={"full"}>
       <CardBody w={"full"}>
@@ -46,7 +51,7 @@ const SCProductCartCard = ({ product }: ProductCartCardProps) => {
               borderRadius="lg"
             />
           </Box>
-          <Stack spacing={3} w={'full'}>
+          <Stack spacing={3} w={"full"}>
             <Heading
               size={"md"}
               fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
@@ -101,6 +106,7 @@ const SCProductCartCard = ({ product }: ProductCartCardProps) => {
             aria-label="delete Product"
             icon={<DeleteIcon />}
             variant={"none"}
+            onClick={handleDelete}
           />
         </Flex>
       </CardFooter>
