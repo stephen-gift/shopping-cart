@@ -52,8 +52,8 @@ const SCHeader = (props: Props) => {
     >
       <Flex justifyContent={"center"} alignItems={"center"} gap={5}>
         <Square size={"72px"} display={{ base: "none", md: "flex" }}>
-          <Link href="/">
-          <Image src="/images/Logo.png" alt="Logo" />
+          <Link href="/" textDecor={"none"}>
+            <Image src="/images/Logo.png" alt="Logo" />
           </Link>
         </Square>
         <IconButton
@@ -80,9 +80,11 @@ const SCHeader = (props: Props) => {
           <Input type="search" placeholder="Search..." />
         </InputGroup>
       </Flex>
-      <Square size={"72px"} display={{ base: "flex", md: "none" }}>
-        <Image src="/images/Logo.png" alt="Logo" />
-      </Square>
+      <Link href="/" textDecoration={"none"}>
+        <Square size={"72px"} display={{ base: "flex", md: "none" }}>
+          <Image src="/images/Logo.png" alt="Logo" />
+        </Square>
+      </Link>
 
       <Flex justifyContent={"center"} alignItems={"center"} gap={10}>
         <IconButton
@@ -131,9 +133,11 @@ const SCHeader = (props: Props) => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">
-            <Square size={"72px"} display={{ base: "none", md: "flex" }}>
-              <Image src="/images/Logo.png" alt="Logo" />
-            </Square>
+            <Link href="/" textDecoration={"none"}>
+              <Square size={"72px"}>
+                <Image src="/images/Logo.png" alt="Logo" />
+              </Square>
+            </Link>
           </DrawerHeader>
           <DrawerBody>
             <IconButton
