@@ -15,6 +15,7 @@ import SCCart from "./global/Cart";
 import SCCustomBreadCrumbs from "./global/BreadCrumb";
 import SCCustomCarousel from "./global/Carousel";
 import SCSeparatorIcon from "./global/CustomIcon/SCSeparatorIcon";
+import SCCheckout from "./global/Checkout";
 
 export {
   SCButton,
@@ -34,4 +35,5 @@ export {
   SCCustomBreadCrumbs,
   SCCustomCarousel,
   SCSeparatorIcon,
+  SCCheckout,
 };

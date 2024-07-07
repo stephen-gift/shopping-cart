@@ -28,7 +28,6 @@ const SCHomePageContainer = (props: Props) => {
           <SCCategoriesContainer />
           <HeroBannerContainer />
           <SCTopProductsContainer />
-          <h1>Welcome to the Home Page</h1>
         </Stack>
       </SCMainLayout>
     </>

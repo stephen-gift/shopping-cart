@@ -1,4 +1,4 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Box, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { Product } from "../../../../types/global";
 import SCProductCartCard from "./SCProductCartCard";
@@ -19,6 +19,16 @@ const SCProductCartCardList = ({ products }: SCProductCartCardListProps) => {
       cart: deleteProductById(state.cart, productId),
     }));
   };
+
+  // Check if cart is empty
+  if (Object.keys(grouped).length === 0) {
+    return (
+      <Box>
+        <Text>Your cart is empty.</Text>
+      </Box>
+    );
+  }
+
   return (
     <Stack spacing={3}>
       {Object.keys(grouped).map((id) => {

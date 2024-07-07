@@ -1,3 +1,4 @@
+'use client'
 // components/SCCustomCarousel.tsx
 import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
 import { useState } from "react";
