@@ -11,9 +11,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Shopping Cart",
+  title: "Stephen's Shopping Cart | Next.js App",
   description:
-    "An intuitive and efficient shopping cart application built with Next.js and TypeScript. Seamlessly manage your online purchases with user-friendly features and a responsive design.",
+    "Manage your online purchases seamlessly with Stephen's intuitive and efficient shopping cart application. Built with Next.js and TypeScript for a responsive shopping experience.",
 };
 
 export default function RootLayout({
