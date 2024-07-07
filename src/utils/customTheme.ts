@@ -9,6 +9,7 @@ const colors = {
   navText: "#5A2C17",
   btnText: "#5A2C1799",
   cardBorder: "#DBDBDB",
+  red: "#ED1212CC",
   // Additional colors as per your provided list
   dark1: "#48474C",
   dark2: "#000000",
