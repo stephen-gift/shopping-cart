@@ -98,7 +98,7 @@ const SCCheckout = (props: Props) => {
               >
                 <AccordionItem
                   border={"none"}
-                  display={{ base: "none", md: "none", lg:block}}
+                  display={{ base: "none", md: "none", lg:"block"}}
                 >
                   <h2>
                     <AccordionButton
@@ -132,7 +132,7 @@ const SCCheckout = (props: Props) => {
 
                 <AccordionItem
                   border={"none"}
-                  display={{ base: "none", md: "none", lg:block }}
+                  display={{ base: "none", md: "none", lg:"block" }}
                 >
                   <h2>
                     <AccordionButton
@@ -164,7 +164,7 @@ const SCCheckout = (props: Props) => {
 
                 <AccordionItem
                   border={"none"}
-                  display={{ base: "none", md: "none", lg:block }}
+                  display={{ base: "none", md: "none", lg:"block" }}
                 >
                   <h2>
                     <AccordionButton
