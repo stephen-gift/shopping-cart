@@ -1,25 +1,34 @@
-'use client'
+"use client";
 // components/SCCustomCarousel.tsx
-import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
-import { useState } from "react";
+import {
+  Box,
+  Button,
+  Heading,
+  IconButton,
+  Stack,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const carouselItems = [
   {
     id: 1,
     image: "/images/Banner1.png",
-    text: "Slide 1",
+    text: "Show More",
   },
   {
     id: 2,
-    image: "/images/Banner2.png",
-    text: "Slide 2",
+    image: "/images/Banner2.jpg",
+    text: "Show More",
   },
   {
     id: 3,
-    image: "/images/Banner1.png",
-    text: "Slide 3",
+    image: "/images/Banner3.jpg",
+    text: "Show More",
   },
 ];
 
@@ -39,6 +48,12 @@ const SCCustomCarousel = () => {
       prev === carouselItems.length - 1 ? 0 : prev + 1
     );
   };
+
+  // Set up auto-scroll
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 2000); // Change slides every 5 seconds
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, []);
 
   const boxSize = useBreakpointValue({
     base: "100vw",
@@ -74,6 +89,19 @@ const SCCustomCarousel = () => {
               w="full"
               h="100%"
             />
+            <Stack
+              pos={"absolute"}
+              top={{ base: "60px", md: "70px", lg: "75px" }}
+              left={{ base: "23px", md: "50px", lg: "106px" }}
+              justifyContent={"center"}
+              alignItems={"center"}
+              gap={2}
+            >
+              <Heading fontWeight={700} fontSize={{ base: "30px", md: "70px" }}>
+                Extra 10% Off
+              </Heading>
+              <Text fontSize={{ base: "15px", md: "25px" }}>EVERYTHING</Text>
+            </Stack>
             <Box
               textAlign="center"
               fontSize="xl"
@@ -83,7 +111,17 @@ const SCCustomCarousel = () => {
               bottom="20px"
               w="full"
             >
-              {item.text}
+              <Button
+                bg={"#F6F6F6"}
+                color={"#5A2C1799"}
+                fontSize={{ base: 15, md: 18 }}
+                border={"1px"}
+                borderColor={"#5A2C17"}
+                maxW={{ base: "150px", md: "200px" }}
+                w={"full"}
+              >
+                Show More
+              </Button>
             </Box>
           </MotionBox>
         ))}
@@ -91,25 +129,27 @@ const SCCustomCarousel = () => {
 
       <IconButton
         aria-label="Previous Slide"
-        icon={<FaArrowLeft />}
+        icon={<ChevronLeftIcon boxSize={10} />}
         position="absolute"
         top="50%"
         left="2"
         transform="translateY(-50%)"
         zIndex={2}
         onClick={prevSlide}
-        variant={'none'}
+        variant={"none"}
+        color={"#F6F6F6"}
       />
       <IconButton
         aria-label="Next Slide"
-        icon={<FaArrowRight />}
+        icon={<ChevronRightIcon boxSize={10} />}
         position="absolute"
         top="50%"
         right="2"
         transform="translateY(-50%)"
         zIndex={2}
         onClick={nextSlide}
-variant={'none'}
+        variant={"none"}
+        color={"#F6F6F6"}
       />
     </Box>
   );
