@@ -31,8 +31,8 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
     onDelete(product.id); // Call onDelete callback with product id
   };
   return (
-    <Card w={"full"}>
-      <CardBody w={"full"}>
+    <Card w={"full"} bg={"none"} borderRadius={0} shadow={0}>
+      <CardBody w={"full"} bg={"none"}>
         <HStack alignItems={"center"} gap={{ base: 2, md: 5 }}>
           <Box
             width={{ base: "101px", md: "228px" }}
@@ -51,23 +51,53 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
               borderRadius="lg"
             />
           </Box>
-          <Stack spacing={3} w={"full"}>
+          <Stack spacing={1} w={"full"}>
             <Heading
-              size={"md"}
-              fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
-              lineHeight={{ base: "14px", md: "20px" }} // Adjust line height for different breakpoints
+              fontSize={{ base: "15px", md: "22px" }} // Adjust font size for different breakpoints
             >
               {product.name}
             </Heading>
-            <Text
-              fontSize={{ base: "10px", md: "16px" }}
-              fontWeight={500}
-              lineHeight={{ base: "12px", md: "18px" }}
-              fontFamily="Archivo"
-              color="#000000CC"
-            >
-              {product.availableSizes.join(", ")}
-            </Text>
+            <Flex justifyContent={"flex-start"} alignItems={"center"} gap={1} flexWrap={'wrap'}>
+              <Text
+                display={"flex"}
+                gap={2}
+                fontSize={{ base: "14px", md: "20px" }}
+                fontWeight={400}
+                lineHeight={{ base: "12px", md: "18px" }}
+                color="#00000080"
+              >
+                Size:{" "}
+                <Text
+                  fontSize={{ base: "14px", md: "20px" }}
+                  fontWeight={600}
+                  color={"dark3"}
+                  isTruncated
+                  maxW={"70px"}
+                >
+                  {product.availableSizes.join(", ")}
+                </Text>
+              </Text>
+              <Text>/</Text>
+
+              <Text
+                display={"flex"}
+                gap={2}
+                fontSize={{ base: "14px", md: "20px" }}
+                fontWeight={400}
+                lineHeight={{ base: "12px", md: "18px" }}
+                color="#00000080"
+              >
+                Color:
+                <Text
+                  fontSize={{ base: "14px", md: "20px" }}
+                  fontWeight={600}
+                  color={"dark3"}
+                >
+                  {product.colorName}
+                </Text>
+              </Text>
+            </Flex>
+
             <Flex
               justifyContent={"space-between"}
               alignItems={"center"}
@@ -98,7 +128,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
           />
         </Flex> */}
       </CardBody>
-      <Divider />
+      <Divider color={"#B7B8BC"} />
       <CardFooter>
         <Flex w={"full"} justifyContent={"space-between"} alignItems={"center"}>
           <SCAddToCart product={product} />
