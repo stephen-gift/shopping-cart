@@ -20,6 +20,9 @@ const colors = {
   dark7: "#BE827D",
   dark8: "#F0B303",
   dark9: "#F5B503CC",
+  brand: {
+    100: "#000000CC",
+  },
 };
 
 const config: ThemeConfig = {
@@ -30,7 +33,7 @@ const config: ThemeConfig = {
 const styles = {
   global: (props: StyleProps) => ({
     body: {
-      bg: mode("white", "dark.900")(props),
+      bg: mode("#F6F6F6", "dark.900")(props),
       color: "dark.500",
       fontVariant: "normal",
     },
