@@ -23,7 +23,6 @@ const SCHomePageContainer = (props: Props) => {
   return (
     <>
       <SCMainLayout>
-        {/* Your Home Page Content */}
         <Stack spacing={3}>
           <SCCategoriesContainer />
           <HeroBannerContainer />
