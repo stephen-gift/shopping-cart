@@ -82,12 +82,12 @@ const SCCheckout = (props: Props) => {
       <SCCustomBreadCrumbs items={breadcrumbs} />
       <Box>
         <Stack
-          flexDir={{ base: "column", md: "row" }}
+          flexDir={{ base: "column", md: "column", lg: "row" }}
           justifyContent={"space-between"}
           spacing={10}
           pt={5}
         >
-          <Box w={"full"} flex={2}>
+          <Box w={"full"} flex={1.5}>
             <Stack>
               <Accordion
                 defaultIndex={[3]}
@@ -402,7 +402,7 @@ const SCCheckout = (props: Props) => {
               </Flex>
             </Box>
             <Divider />
-            <Box>
+            <Stack spacing={5}>
               <Flex justifyContent={"space-between"} alignItems={"center"}>
                 <Text
                   fontWeight={600}
@@ -420,7 +420,7 @@ const SCCheckout = (props: Props) => {
                   {formatCurrency(total)}
                 </Text>
               </Flex>
-              <Stack justifyContent={"center"} alignItems={"center"}>
+              <Stack justifyContent={"center"} alignItems={"center"} spacing={0}>
                 <Button
                   maxW={{ base: "150px", md: "271px" }}
                   w={"100%"}
@@ -515,7 +515,7 @@ const SCCheckout = (props: Props) => {
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-            </Box>
+            </Stack>
           </Stack>
         </Stack>
       </Box>

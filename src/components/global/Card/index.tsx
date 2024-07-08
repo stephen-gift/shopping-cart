@@ -23,8 +23,21 @@ interface ProductCardProps {
 
 const SCProductCard = ({ product }: ProductCardProps) => {
   return (
-    <Card border={"2px"} borderColor={"#DBDBDB"} boxShadow="sm">
-      <CardBody p={3}>
+    <Card
+      border={"2px"}
+      borderColor={"#DBDBDB"}
+      boxShadow="sm"
+      _hover={{
+        boxShadow: "md",
+        borderColor: "gray.200",
+        transform: "scale(1.02)", // Scale up by 2% on hover
+        transition:
+          "box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out",
+        cursor: "pointer", // Optional: Change cursor on hover
+        bg: "gray.50", // Background color on hover
+      }}
+    >
+      <CardBody p={3} >
         <Box borderRadius="lg" overflow="hidden">
           <Image
             src={product.imagePath}

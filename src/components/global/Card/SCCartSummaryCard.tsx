@@ -23,7 +23,6 @@ type Props = {};
 const SCCartSummaryCard = (props: Props) => {
   const router = useRouter();
   const toast = useToast();
-  const id = "test-toast";
 
   const cart = useCartStore((state) => state.cart);
   const subTotal: number = getCartTotal(cart);

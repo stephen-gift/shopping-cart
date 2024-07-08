@@ -15,9 +15,7 @@ const SCAddToCart = ({ product }: Props) => {
     state.addToCart,
   ]);
 
-  const howManyInCart = cart.filter(
-    (item) => item.name === product.name
-  ).length;
+  const howManyInCart = cart.filter((item) => item.id === product.id).length;
 
   const handleAdd = () => {
     console.log("Adding to cart", product);

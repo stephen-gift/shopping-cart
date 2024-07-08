@@ -25,19 +25,19 @@ const products: Product[] = [
     reviews: sampleReviews.slice(0, 2), // Using first two reviews
   },
   {
-    id: "6",
-    name: "Satin Sundress",
-    description: "This is product F.",
+    id: "2",
+    name: "Gold loop earrings",
+    description: "This is product B.",
     imagePath: "/images/Product6.png",
-    availableSizes: ["S", "M", "XL"],
-    colors: { primary: "#F0B303", secondary: "#000000CC" },
-    colorName: "Yellow-Black",
-    price: 54.99,
-    brand: "Brand F",
-    category: "Category C",
-    rating: 4.1,
-    stock: 18,
-    reviews: sampleReviews.slice(1, 2), // Using second review
+    availableSizes: ["M", "L", "XL"],
+    colors: { primary: "#996515", secondary: "#F5B503CC" },
+    colorName: "Gold",
+    price: 59.99,
+    brand: "Brand B",
+    category: "Category B",
+    rating: 4.0,
+    stock: 15,
+    reviews: sampleReviews.slice(1, 3), // Using reviews 2 and 3
   },
   {
     id: "3",
