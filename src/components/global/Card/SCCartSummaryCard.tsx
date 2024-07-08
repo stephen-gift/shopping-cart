@@ -8,18 +8,23 @@ import {
   Divider,
   Flex,
   Heading,
-  Link,
   Stack,
-  StackDivider,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
+import { useRouter } from "next/navigation";
 import { useCartStore } from "../../../../store";
 import { getCartTotal } from "@/lib/getCartTotal";
+import { calculateDiscountTaxTotal } from "@/lib/calculateDiscountTaskTotal";
 
 type Props = {};
 
 const SCCartSummaryCard = (props: Props) => {
+  const router = useRouter();
+  const toast = useToast();
+  const id = "test-toast";
+
   const cart = useCartStore((state) => state.cart);
   const subTotal: number = getCartTotal(cart);
 
@@ -28,9 +33,11 @@ const SCCartSummaryCard = (props: Props) => {
   const taxRate = 0.05; // 5% tax
 
   // Calculate discount, tax, and total values
-  const discount = subTotal * discountRate;
-  const tax = (subTotal - discount) * taxRate;
-  const total = subTotal - discount + tax;
+  const { discount, tax, total } = calculateDiscountTaxTotal(
+    subTotal,
+    discountRate,
+    taxRate
+  );
 
   const formatCurrency = (value: number) => {
     return `$ ${value.toFixed(2)}`;
@@ -46,21 +53,42 @@ const SCCartSummaryCard = (props: Props) => {
     });
   };
 
+  const handleCheckoutClick = () => {
+    if (cart.length === 0) {
+      toast({
+        title: "Your cart is empty.",
+        description: "Please go to the homepage to add items to your cart.",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
+    } else {
+      router.push("/checkout");
+    }
+  };
+
   return (
-    <Card>
-      <CardHeader>
-        <Heading size="md">Client Report</Heading>
+    <Card bg={"#D9D9D966"}>
+      <CardHeader justifyContent={"center"} alignItems={"center"}>
+        <Heading
+          textAlign={"center"}
+          fontWeight={600}
+          fontSize={{ base: 18, md: 25 }}
+          color={"#ED121280"}
+        >
+          Order summary
+        </Heading>
       </CardHeader>
-      <Divider />
+      <Divider color={"#D9D9D966"} />
       <CardBody>
         <Stack>
           <Box>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               <Text>sub total</Text>
               <Text
-                fontFamily="Poppins"
-                fontSize="20px"
-                fontWeight="500"
+                fontSize={{ base: "15px", md: "20px" }}
+                fontWeight={500}
                 lineHeight="30px"
                 textAlign="left"
               >
@@ -70,9 +98,8 @@ const SCCartSummaryCard = (props: Props) => {
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               <Text>Discount</Text>
               <Text
-                fontFamily="Poppins"
-                fontSize="20px"
-                fontWeight="500"
+                fontSize={{ base: "15px", md: "20px" }}
+                fontWeight={500}
                 lineHeight="30px"
                 textAlign="left"
               >
@@ -82,9 +109,8 @@ const SCCartSummaryCard = (props: Props) => {
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               <Text>Tax</Text>
               <Text
-                fontFamily="Poppins"
-                fontSize="20px"
-                fontWeight="500"
+                fontSize={{ base: "15px", md: "20px" }}
+                fontWeight={500}
                 lineHeight="30px"
                 textAlign="left"
               >
@@ -94,22 +120,20 @@ const SCCartSummaryCard = (props: Props) => {
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               <Text>shipping</Text>
               <Text
-                fontFamily="Poppins"
-                fontSize="20px"
-                fontWeight="500"
+                fontSize={{ base: "15px", md: "20px" }}
+                fontWeight={500}
                 lineHeight="30px"
                 textAlign="left"
-                color={"red"}
+                color={"#ED1212CC"}
               >
-                free
+                FREE
               </Text>
             </Flex>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               <Text>Total</Text>
               <Text
-                fontFamily="Poppins"
-                fontSize="20px"
-                fontWeight="500"
+                fontSize={{ base: "15px", md: "20px" }}
+                fontWeight={500}
                 lineHeight="30px"
                 textAlign="left"
               >
@@ -117,25 +141,26 @@ const SCCartSummaryCard = (props: Props) => {
               </Text>
             </Flex>
           </Box>
-          <Link
-            href="/checkout"
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            textDecoration={'none'}
+
+          <Button
+            onClick={handleCheckoutClick}
+            bg={"#48474CB2"}
+            color={"white"}
+            _hover={{ bg: "#48474CB2" }}
+            textDecor={"none"}
+            borderRadius={20}
           >
-            <Button>Proceed To Checkout</Button>
-          </Link>
+            Proceed To Checkout
+          </Button>
         </Stack>
       </CardBody>
-      <Divider />
+      <Divider color={"#D9D9D966"} />
       <CardFooter>
         <Flex w={"full"} justifyContent={"space-between"} alignItems={"center"}>
-          <Text>Estimated Delivery </Text>
+          <Text>Estimated Delivery by</Text>
           <Text
-            fontFamily="Poppins"
-            fontSize="20px"
-            fontWeight="500"
+            fontSize={{ base: "15px", md: "20px" }}
+            fontWeight={500}
             lineHeight="30px"
             textAlign="left"
           >
