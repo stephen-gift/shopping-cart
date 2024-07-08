@@ -11,8 +11,9 @@ const SCProductList = ({ products }: SCProductListProps) => {
   return (
     <>
       <SimpleGrid
-        columns={{ base: 3, sm: 3, md: 4 }}
-        gap={{ base: "5px", sm: "16px", md: "27px" }}
+        columns={{ base: 2, md: 3, lg: 5 }}
+        spacing={{ base: "9px", md: "16px", lg: "27px" }}
+        p={{ base: 3, md: 5, lg: 5 }}
       >
         {products.map((product) => (
           <Box key={product.id}>
