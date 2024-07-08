@@ -10,6 +10,7 @@ import {
   Stack,
   StackDivider,
   Text,
+  Tooltip,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
@@ -23,11 +24,7 @@ interface ProductCardProps {
 
 const SCProductCard = ({ product }: ProductCardProps) => {
   return (
-    <Card
-      border={'2px'}
-      borderColor={"#DBDBDB"}
-      boxShadow="sm"
-    >
+    <Card border={"2px"} borderColor={"#DBDBDB"} boxShadow="sm">
       <CardBody p={3}>
         <Box borderRadius="lg" overflow="hidden">
           <Image
@@ -46,20 +43,26 @@ const SCProductCard = ({ product }: ProductCardProps) => {
             width={imageWidth}
             height={imageHeight}
           /> */}
-          <Flex justifyContent={"space-between"} alignItems={"center"}>
-            <Box>
-              <Heading
-                fontWeight={500}
-                fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
-                lineHeight={{ base: "14px", md: "20px" }} // Adjust line height for different breakpoints
-              >
-                <Text
-                  maxW={{ base: "150px", md: "100px", lg: "100px" }}
-                  isTruncated
-                >
-                  {product.name}
-                </Text>
-              </Heading>
+          <Flex
+            justifyContent={"space-between"}
+            alignItems={"center"}
+            flexWrap={"wrap"}
+          >
+            <Box flex={1}>
+            <Tooltip label={product.name} aria-label={product.name}>
+            <Heading
+              fontWeight={500}
+              fontSize={{ base: "12px", md: "16px" }}
+              lineHeight={{ base: "14px", md: "20px" }}
+              // Ensure heading text truncates
+              overflow="hidden"
+              textOverflow="ellipsis"
+              whiteSpace="nowrap"
+              maxWidth="calc(100% - 50px)" // Adjust the max-width as per your design
+            >
+              {product.name}
+            </Heading>
+          </Tooltip>
               <Text
                 fontSize={{ base: "8px", md: "10px" }}
                 fontWeight={600}
