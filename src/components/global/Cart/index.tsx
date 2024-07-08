@@ -23,22 +23,23 @@ const SCCart = (props: Props) => {
     { label: "2.Checkout", href: "/checkout" },
   ];
   return (
-    <Box>
-      <Heading>Cart</Heading>
-      <SCCustomBreadCrumbs items={breadcrumbs} />
+    <Box px={{ base: 0, md: 10 }}>
+      <Box pl={{ base: 10, md: 0 }}>
+        <Heading>Cart</Heading>
+        <SCCustomBreadCrumbs items={breadcrumbs} />
+      </Box>
       <Box>
         <Stack
-          flexDir={{ base: "column", md: "row" }}
+          flexDir={{ base: "column", md: "column" ,lg:'row'}}
           justifyContent={"space-between"}
           spacing={10}
-          p={5}
         >
-          <Box w={'full'} flex={2}>
+          <Box w={"full"} flex={1.5}>
             <SCProductCartCardList products={products} />
           </Box>
           <Stack flex={1}>
             <SCCartSummaryCard />
-            <SCCartCouponCard />
+            {/* <SCCartCouponCard /> */}
           </Stack>
         </Stack>
       </Box>
