@@ -7,6 +7,7 @@ interface CartState {
   cart: Product[];
   addToCart: (product: Product) => void;
   removeFromCart: (product: Product) => void;
+  clearCart: () => void;
 }
 
 export const useCartStore = create<CartState>()(
@@ -26,6 +27,9 @@ export const useCartStore = create<CartState>()(
           newCart.splice(productToRemove, 1);
           return { cart: newCart };
         });
+      },
+      clearCart: () => {
+        set(() => ({ cart: [] }));
       },
     }),
     {
