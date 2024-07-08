@@ -3,6 +3,7 @@ import React from "react";
 import { useCartStore } from "../../../../store";
 import { Product } from "../../../../types/global";
 import SCRemoveFromCart from "./RemoveFromCart";
+import { AddIcon } from "@chakra-ui/icons";
 
 type Props = {
   product: Product;
@@ -29,10 +30,10 @@ const SCAddToCart = ({ product }: Props) => {
         <Flex
           justifyContent={"space-between "}
           alignItems={"center"}
-          w={{ base: "100px", md: "200px" }}
+          maxW={{ base: "100px", md: "200px" }}
+          w={"full"}
+          gap={3}
         >
-          <SCRemoveFromCart product={product} />
-          <Text>{howManyInCart}</Text>
           <Button
             onClick={handleAdd}
             size="xs"
@@ -41,10 +42,16 @@ const SCAddToCart = ({ product }: Props) => {
             lineHeight={{ base: "12px", md: "16px" }}
             textAlign="left"
             variant={"none"}
-            border="0.5px solid #5A2C1799"
+            // border="0.5px solid #5A2C1799"
+            bg={"#D9D9D9"}
+            borderRadius={0}
           >
-            +
+            <AddIcon color={"#000000"} />
           </Button>
+          <Text color={"#000000"} fontWeight={600} fontSize={14}>
+            {howManyInCart}
+          </Text>
+          <SCRemoveFromCart product={product} />
         </Flex>
       </Flex>
     );
@@ -55,14 +62,13 @@ const SCAddToCart = ({ product }: Props) => {
       <Button
         onClick={handleAdd}
         size="xs"
-        fontFamily="Archivo"
-        fontSize={{ base: "6px", md: "10px" }}
+        fontSize={{ base: "7px", md: "10px" }}
         fontWeight={400}
-        lineHeight={{ base: "6.53px", md: "10.88px" }}
         textAlign="left"
         border="0.5px solid #5A2C1799"
         variant={"none"}
-        w={{ base: "100px", md: "200px" }}
+        maxW={{ base: "100px", md: "200px" }}
+        w={"full"}
       >
         Add to Cart
       </Button>
