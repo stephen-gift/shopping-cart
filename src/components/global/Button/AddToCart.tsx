@@ -32,22 +32,27 @@ const SCAddToCart = ({ product }: Props) => {
           alignItems={"center"}
           maxW={{ base: "100px", md: "200px" }}
           w={"full"}
-          gap={3}
+          gap={2}
         >
-          <Button
+          <Box
+            as="button"
             onClick={handleAdd}
-            size="xs"
+            w="15px"
+            h="15px"
+            p={0}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
             fontSize={{ base: "10px", md: "14px" }}
             fontWeight={500}
             lineHeight={{ base: "12px", md: "16px" }}
             textAlign="left"
-            variant={"none"}
             // border="0.5px solid #5A2C1799"
             bg={"#D9D9D9"}
             borderRadius={0}
           >
-            <AddIcon color={"#000000"} />
-          </Button>
+            <AddIcon boxSize={2} />
+          </Box>
           <Text color={"#000000"} fontWeight={600} fontSize={14}>
             {howManyInCart}
           </Text>

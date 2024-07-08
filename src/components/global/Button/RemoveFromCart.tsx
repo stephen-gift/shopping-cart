@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import React from "react";
 import { Product } from "../../../../types/global";
 import { useCartStore } from "../../../../store";
@@ -14,20 +14,25 @@ const SCRemoveFromCart = ({ product }: { product: Product }) => {
   };
 
   return (
-    <Button
+    <Box
+      as="button"
       onClick={handleRemove}
-      size="xs"
+      w="15px"
+      h="15px"
+      p={0}
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
       fontSize={{ base: "10px", md: "14px" }}
       fontWeight={500}
       lineHeight={{ base: "12px", md: "16px" }}
       textAlign="left"
-      variant={"none"}
       // border="0.5px solid #5A2C1799"
       bg={"#D9D9D9"}
       borderRadius={0}
     >
-      <MinusIcon />
-    </Button>
+      <MinusIcon boxSize={2} />
+    </Box>
   );
 };
 

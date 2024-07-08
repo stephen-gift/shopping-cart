@@ -57,7 +57,12 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
             >
               {product.name}
             </Heading>
-            <Flex justifyContent={"flex-start"} alignItems={"center"} gap={1} flexWrap={'wrap'}>
+            <Flex
+              justifyContent={"flex-start"}
+              alignItems={"center"}
+              gap={1}
+              flexWrap={"wrap"}
+            >
               <Text
                 display={"flex"}
                 gap={2}

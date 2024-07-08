@@ -51,7 +51,7 @@ const SCCustomCarousel = () => {
 
   // Set up auto-scroll
   useEffect(() => {
-    const interval = setInterval(nextSlide, 2000); // Change slides every 5 seconds
+    const interval = setInterval(nextSlide, 5000); // Change slides every 5 seconds
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, []);
 

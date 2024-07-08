@@ -23,15 +23,20 @@ interface ProductCardProps {
 
 const SCProductCard = ({ product }: ProductCardProps) => {
   return (
-    <Card border={"2px"} borderColor={"cardBorder"}>
+    <Card
+      border={'2px'}
+      borderColor={"#DBDBDB"}
+      boxShadow="sm"
+    >
       <CardBody p={3}>
-        <Box maxW="100%" borderRadius="lg" overflow="hidden">
+        <Box borderRadius="lg" overflow="hidden">
           <Image
             src={product.imagePath}
             alt={product.name}
-            boxSize="100%"
             objectFit="cover"
             objectPosition="center"
+            w="full"
+            h="full"
             borderRadius="lg"
           />
         </Box>
@@ -48,7 +53,12 @@ const SCProductCard = ({ product }: ProductCardProps) => {
                 fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
                 lineHeight={{ base: "14px", md: "20px" }} // Adjust line height for different breakpoints
               >
-                {product.name}
+                <Text
+                  maxW={{ base: "150px", md: "100px", lg: "100px" }}
+                  isTruncated
+                >
+                  {product.name}
+                </Text>
               </Heading>
               <Text
                 fontSize={{ base: "8px", md: "10px" }}
@@ -67,7 +77,7 @@ const SCProductCard = ({ product }: ProductCardProps) => {
             </Text>
           </Flex>
 
-          <Flex justifyContent={'space-between'} alignItems={'center'}>
+          <Flex justifyContent={"space-between"} alignItems={"center"}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               <Flex justifyContent={"center"} alignItems={"center"}>
                 <Square size="15px" bg={product.colors.primary} mr="2px" />
