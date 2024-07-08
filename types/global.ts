@@ -14,6 +14,7 @@ export interface Product {
     primary: string;
     secondary: string;
   };
+  colorName: string;
   price: number;
   brand: string;
   category: string;
