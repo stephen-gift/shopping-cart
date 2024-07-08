@@ -41,39 +41,41 @@ const SCProductCard = ({ product }: ProductCardProps) => {
             width={imageWidth}
             height={imageHeight}
           /> */}
-          <Heading
-            size={"md"}
-            fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
-            lineHeight={{ base: "14px", md: "20px" }} // Adjust line height for different breakpoints
-          >
-            {product.name}
-          </Heading>
-          <Text
-            fontSize={{ base: "10px", md: "16px" }}
-            fontWeight={500}
-            lineHeight={{ base: "12px", md: "18px" }}
-            fontFamily="Archivo"
-            color="#000000CC"
-          >
-            {product.availableSizes.join(", ")}
-          </Text>
-
           <Flex justifyContent={"space-between"} alignItems={"center"}>
-            <Flex justifyContent={"center"} alignItems={"center"}>
-              <Square size="15px" bg={product.colors.primary} mr="2px" />
-              <Square size="15px" bg={product.colors.secondary} />
-            </Flex>
+            <Box>
+              <Heading
+                fontWeight={500}
+                fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
+                lineHeight={{ base: "14px", md: "20px" }} // Adjust line height for different breakpoints
+              >
+                {product.name}
+              </Heading>
+              <Text
+                fontSize={{ base: "8px", md: "10px" }}
+                fontWeight={600}
+                color="#000000B2"
+              >
+                {product.availableSizes.join(", ")}
+              </Text>
+            </Box>
             <Text
               fontSize={{ base: "10px", md: "12px" }}
               fontWeight={500}
-              lineHeight={{ base: "12px", md: "16px" }}
-              fontFamily="Archivo"
               color="#000000CC"
             >
               ${product.price.toFixed(2)}
             </Text>
           </Flex>
-          <SCAddToCart product={product} />
+
+          <Flex justifyContent={'space-between'} alignItems={'center'}>
+            <Flex justifyContent={"space-between"} alignItems={"center"}>
+              <Flex justifyContent={"center"} alignItems={"center"}>
+                <Square size="15px" bg={product.colors.primary} mr="2px" />
+                <Square size="15px" bg={product.colors.secondary} />
+              </Flex>
+            </Flex>
+            <SCAddToCart product={product} />
+          </Flex>
         </Stack>
       </CardBody>
     </Card>
