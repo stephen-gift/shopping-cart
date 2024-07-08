@@ -87,13 +87,13 @@ const SCHeader = (props: Props) => {
       </Link>
 
       <Flex justifyContent={"center"} alignItems={"center"} gap={10}>
-        <IconButton
+        {/* <IconButton
           display={{ base: "none", md: "flex" }}
           onClick={toggleColorMode}
           icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           variant={"none"}
           aria-label="Open Menu"
-        />
+        /> */}
 
         <Flex alignItems={"center"} justifyContent={"center"} gap={5}>
           <IconButton
@@ -140,13 +140,13 @@ const SCHeader = (props: Props) => {
             </Link>
           </DrawerHeader>
           <DrawerBody>
-            <IconButton
+            {/* <IconButton
               display={{ base: "flex", md: "none" }}
               onClick={toggleColorMode}
               icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               variant={"none"}
               aria-label="Open Menu"
-            />
+            /> */}
 
             <p>Some contents...</p>
             <p>Some contents...</p>
