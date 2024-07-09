@@ -1,5 +1,5 @@
 
-# E-commerce Website Implementation for HNG Internship
+# E-commerce Website Implementation
 
 This project showcases a meticulously crafted, fully responsive, and statically generated e-commerce website designed according to specifications from Figma. Developed using Next.js and Chakra UI, it represents a pivotal stage 2 frontend task for the HNG Internship's Frontend Track.
 
