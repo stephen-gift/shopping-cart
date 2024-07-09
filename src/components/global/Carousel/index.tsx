@@ -106,6 +106,28 @@ const SCCustomCarousel = () => {
     lg: "100vw",
   });
 
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      switch (event.key) {
+        case "ArrowLeft":
+          prevSlide();
+          break;
+        case "ArrowRight":
+          nextSlide();
+          break;
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <Box
       position="relative"
