@@ -41,7 +41,7 @@ This project showcases a meticulously crafted, fully responsive, and statically 
 ### Links
 
 - Live Site URL: [Online Shopping Cart](https://stephengift-shoppingcart.vercel.app/)
-- GitHub URL: [Repository](https://github.com/stephen-gift/bluetech-department-list.git)
+- GitHub URL: [Repository](https://github.com/stephen-gift/shopping-cart)
 
 ## Technologies Used
 
