@@ -76,6 +76,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
                 borderRadius="lg"
               />
             </Box>
+            
             <Stack spacing={1} w={"full"}>
               <Heading
                 fontSize={{ base: "15px", md: "22px" }} // Adjust font size for different breakpoints
