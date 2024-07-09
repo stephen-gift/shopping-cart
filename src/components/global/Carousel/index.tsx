@@ -17,7 +17,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 const carouselItems = [
   {
     id: 1,
-    image: "/images/Banner1.png",
+    image: "/images/Banner1.jpg",
     text: "Show More",
   },
   {
@@ -73,6 +73,11 @@ const carouselItems = [
   {
     id: 12,
     image: "/images/Banner12.jpg",
+    text: "Show More",
+  },
+  {
+    id: 13,
+    image: "/images/Banner13.jpg",
     text: "Show More",
   },
 ];

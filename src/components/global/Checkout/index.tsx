@@ -122,13 +122,13 @@ const SCCheckout = (props: Props) => {
                   </h2>
                   <AccordionPanel bg={"white"}>
                     <Box>
-                      <strong>Name:</strong> John Doe
+                      <strong>Name:</strong> Stephen Gift
                       <br />
-                      <strong>Email:</strong> john.doe@example.com
+                      <strong>Email:</strong> stephengift43@gmail.com
                       <br />
-                      <strong>Phone:</strong> +1 (123) 456-7890
+                      <strong>Phone:</strong> +234 812 363 9058
                       <br />
-                      <strong>Address:</strong> 123 Main Street, City, Country
+                      <strong>Address:</strong> Alagomegi, Yaba, Lagos, Nigeria.
                       <br />
                     </Box>{" "}
                   </AccordionPanel>
@@ -433,17 +433,17 @@ const SCCheckout = (props: Props) => {
                 alignItems={"center"}
                 spacing={5}
               >
-              <Button
-  maxW={{ base: "150px", md: "271px" }}
-  w={"100%"}
-  bg={"#000000CC"}
-  onClick={onOpen}
-  color={"white"}
-  borderRadius={"lg"}
->
-  Place Order
-</Button>
-                
+                <Button
+                  maxW={{ base: "150px", md: "271px" }}
+                  w={"100%"}
+                  bg={"#000000CC"}
+                  onClick={onOpen}
+                  color={"white"}
+                  borderRadius={"lg"}
+                >
+                  Place Order
+                </Button>
+
                 <Box>
                   <Text
                     fontWeight={500}

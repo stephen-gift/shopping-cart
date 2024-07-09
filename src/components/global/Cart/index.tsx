@@ -30,12 +30,14 @@ const SCCart = (props: Props) => {
       </Box>
       <Box>
         <Stack
-          flexDir={{ base: "column", md: "column" ,lg:'row'}}
+          flexDir={{ base: "column", md: "column", lg: "row" }}
           justifyContent={"space-between"}
           spacing={10}
         >
-          <Box w={"full"} flex={1.5}>
-            <SCProductCartCardList products={products} />
+          <Box w={"full"} flex={1.5} overflowX="auto">
+            <Box maxH="500px" overflowY="auto">
+              <SCProductCartCardList products={products} />
+            </Box>
           </Box>
           <Stack flex={1}>
             <SCCartSummaryCard />

@@ -118,7 +118,7 @@ const products: Product[] = [
     id: "8",
     name: "Leather Belt",
     description: "This is product H.",
-    imagePath: "/images/Product8.Jpg",
+    imagePath: "/images/Product8.jpg",
     availableSizes: ["L", "XL"],
     colors: { primary: "#48474C", secondary: "#BE827D" },
     colorName: "Gray-Pink",
