@@ -153,10 +153,9 @@ const SCCartSummaryCard = (props: Props) => {
   borderRadius={20}
   transition="all 0.3s ease"
   _hover={{
-    bg: "#374382",
-    transform: "translateY(-2px)",
-    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)"
-  }}
+          bg: "#5A2C17",
+          color: "#FFFFFF",
+        }}
 >
   Proceed To Checkout
 </Button>
