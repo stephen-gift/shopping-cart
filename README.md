@@ -185,7 +185,7 @@ Here are some valuable resources that have been instrumental in my professional 
 ### Designer
 
  - Behance - [Behance](https://www.behance.net/tracyboboye2)
-- Email - [tracyilliti@gmail.com](mailti:tracyilliti@gmail.com) 
+- Email - [tracyilliti@gmail.com](mailto:tracyilliti@gmail.com) 
 
 
 
