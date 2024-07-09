@@ -176,7 +176,7 @@ const SCCustomCarousel = () => {
               gap={2}
             >
               <Heading fontWeight={700} fontSize={{ base: "30px", md: "70px" }}>
-                Extra 10% Off
+                LUCY
               </Heading>
               <Text fontSize={{ base: "15px", md: "25px" }}>EVERYTHING</Text>
             </Stack>
