@@ -146,15 +146,21 @@ const SCCartSummaryCard = (props: Props) => {
           </Flex>
 
           <Button
-            onClick={handleCheckoutClick}
-            bg={"#48474CB2"}
-            color={"white"}
-            _hover={{ bg: "#48474CB2" }}
-            textDecor={"none"}
-            borderRadius={20}
-          >
-            Proceed To Checkout
-          </Button>
+  onClick={handleCheckoutClick}
+  bg={"#48474CB2"}
+  color={"white"}
+  textDecor={"none"}
+  borderRadius={20}
+  transition="all 0.3s ease"
+  _hover={{
+    bg: "#374382",
+    border: "1px solid #F0B303",
+    transform: "translateY(-2px)",
+    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)"
+  }}
+>
+  Proceed To Checkout
+</Button>
         </Stack>
       </CardBody>
       <Divider color={"#4F4F4F40"} />
