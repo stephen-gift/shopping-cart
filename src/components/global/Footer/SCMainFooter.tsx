@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import {
   Box,
@@ -10,7 +10,13 @@ import {
   Button,
   Icon,
 } from "@chakra-ui/react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaMailBulk,
+  FaTwitter,
+} from "react-icons/fa";
 import SCFooter from ".";
 import { FiSettings } from "react-icons/fi";
 
@@ -163,7 +169,7 @@ const SCMainFooter = (props: Props) => {
             flex="1"
             justify={["center", "center", "flex-start"]}
           >
-           <Flex justifyContent={"flex-start"} w={"full"} position="sticky" bottom="">
+            <Flex justifyContent={"flex-start"} w={"full"} position="sticky">
               <Button
                 size="md"
                 variant={"none"}
@@ -183,7 +189,7 @@ const SCMainFooter = (props: Props) => {
             <Flex>
               <IconButton
                 aria-label="Facebook"
-                icon={<FaFacebook />}
+                icon={<FaInstagram />}
                 isRound
                 variant="ghost"
                 color="#5A2C17"
@@ -199,15 +205,28 @@ const SCMainFooter = (props: Props) => {
                 _hover={{ bg: "gray.600" }}
                 mx={2}
               />
-              <IconButton
-                aria-label="Instagram"
-                icon={<FaInstagram />}
-                isRound
-                variant="ghost"
-                color="#5A2C17"
-                _hover={{ bg: "gray.600" }}
-                mx={2}
-              />
+              <Flex justifyContent={"center"} alignItems={"center"}>
+                <Link
+                  flex={1}
+                  textDecor={"none"}
+                  fontSize={{
+                    base: "7px",
+                    md: "10px",
+                  }}
+                  href="mailto:stephengift43@gmail.com"
+                  isExternal
+                >
+                  <IconButton
+                    aria-label="Instagram"
+                    icon={<FaEnvelope />}
+                    isRound
+                    variant="ghost"
+                    color="#5A2C17"
+                    _hover={{ bg: "gray.600" }}
+                    mx={2}
+                  />
+                </Link>
+              </Flex>
             </Flex>
           </Flex>
         </Flex>
