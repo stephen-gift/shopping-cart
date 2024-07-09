@@ -10,6 +10,7 @@ import {
   Stack,
   StackDivider,
   Text,
+  Tooltip,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { Product } from "../../../../types/global";
@@ -70,19 +71,22 @@ const SCProductCard = ({ product }: ProductCardProps) => {
               flexWrap={"wrap"}
             >
               <Box flex={1}>
-                <Heading
-                  w={"full"}
-                  fontWeight={500}
-                  fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
-                  lineHeight={{ base: "14px", md: "20px" }} // Adjust line height for different breakpoints
-                >
-                  <Text
-                    maxW={{ base: "70px", md: "100px", lg: "100px" }}
-                    isTruncated
+                <Tooltip label={product.name}>
+                  <Heading
+                    w={"full"}
+                    fontWeight={500}
+                    fontSize={{ base: "12px", md: "16px" }} // Adjust font size for different breakpoints
+                    lineHeight={{ base: "14px", md: "20px" }} // Adjust line height for different breakpoints
                   >
-                    {product.name}
-                  </Text>
-                </Heading>
+                    <Text
+                      maxW={{ base: "70px", md: "100px", lg: "100px" }}
+                      isTruncated
+                    >
+                      {product.name}
+                    </Text>
+                  </Heading>
+                </Tooltip>
+
                 <Text
                   fontSize={{ base: "8px", md: "10px" }}
                   fontWeight={600}

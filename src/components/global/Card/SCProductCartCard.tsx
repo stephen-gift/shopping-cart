@@ -33,11 +33,30 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
   };
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      whileHover={{
+        scale: 1.02,
+        transition: { duration: 0.5 },
+      }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <Card w={"full"} bg={"none"} borderRadius={0} shadow={0}>
+      <Card
+        w={"full"}
+        bg={"none"}
+        borderRadius={0}
+        shadow={0}
+        _hover={{
+          boxShadow: "md",
+          borderColor: "gray.200",
+          transform: "scale(1.01)", // Scale up by 2% on hover
+          transition:
+            "box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out",
+          cursor: "pointer", // Optional: Change cursor on hover
+          bg: "gray.50", // Background color on hover
+        }}
+      >
         <CardBody w={"full"} bg={"none"}>
           <HStack alignItems={"center"} gap={{ base: 2, md: 5 }}>
             <Box
