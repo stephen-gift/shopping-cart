@@ -30,6 +30,51 @@ const carouselItems = [
     image: "/images/Banner3.jpg",
     text: "Show More",
   },
+  {
+    id: 4,
+    image: "/images/Banner4.jpg",
+    text: "Show More",
+  },
+  {
+    id: 5,
+    image: "/images/Banner5.jpg",
+    text: "Show More",
+  },
+  {
+    id: 6,
+    image: "/images/Banner6.jpg",
+    text: "Show More",
+  },
+  {
+    id: 7,
+    image: "/images/Banner7.jpg",
+    text: "Show More",
+  },
+  {
+    id: 8,
+    image: "/images/Banner8.jpg",
+    text: "Show More",
+  },
+  {
+    id: 9,
+    image: "/images/Banner9.jpg",
+    text: "Show More",
+  },
+  {
+    id: 10,
+    image: "/images/Banner10.jpg",
+    text: "Show More",
+  },
+  {
+    id: 11,
+    image: "/images/Banner11.jpg",
+    text: "Show More",
+  },
+  {
+    id: 12,
+    image: "/images/Banner12.jpg",
+    text: "Show More",
+  },
 ];
 
 const MotionBox = motion(Box);
@@ -88,6 +133,7 @@ const SCCustomCarousel = () => {
               alt={`Slide ${index + 1}`}
               w="full"
               h="100%"
+              objectFit="cover"
             />
             <Stack
               pos={"absolute"}

@@ -72,6 +72,10 @@ const SCAddToCart = ({ product }: Props) => {
         variant={"none"}
         maxW={{ base: "100px", md: "200px" }}
         w={"full"}
+        _hover={{
+          bg: "#5A2C17",
+          color: "#FFFFFF",
+        }}
       >
         Add to Cart
       </Button>

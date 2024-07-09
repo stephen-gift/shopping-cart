@@ -77,9 +77,11 @@ const SCCheckout = (props: Props) => {
   };
 
   return (
-    <Box>
-      <Heading>Checkout</Heading>
-      <SCCustomBreadCrumbs items={breadcrumbs} />
+    <Box px={{ base: 0, md: 10 }}>
+      <Box pl={{ base: 10, md: 0 }}>
+        <Heading>Checkout</Heading>
+        <SCCustomBreadCrumbs items={breadcrumbs} />
+      </Box>
       <Box>
         <Stack
           flexDir={{ base: "column", md: "column", lg: "row" }}
@@ -97,8 +99,10 @@ const SCCheckout = (props: Props) => {
                 gap={3}
               >
                 <AccordionItem
+                  gap={2}
+                  flexDir={"column"}
                   border={"none"}
-                  display={{ base: "none", md: "none", lg:"block"}}
+                  display={{ base: "none", md: "none", lg: "flex" }}
                 >
                   <h2>
                     <AccordionButton
@@ -116,7 +120,7 @@ const SCCheckout = (props: Props) => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel>
+                  <AccordionPanel bg={"white"}>
                     <Box>
                       <strong>Name:</strong> John Doe
                       <br />
@@ -131,8 +135,10 @@ const SCCheckout = (props: Props) => {
                 </AccordionItem>
 
                 <AccordionItem
+                  gap={2}
+                  flexDir={"column"}
                   border={"none"}
-                  display={{ base: "none", md: "none", lg:"block" }}
+                  display={{ base: "none", md: "none", lg: "flex" }}
                 >
                   <h2>
                     <AccordionButton
@@ -150,7 +156,7 @@ const SCCheckout = (props: Props) => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel>
+                  <AccordionPanel bg={"white"}>
                     <Box>
                       <strong>Delivery Method:</strong> Express Shipping
                       <br />
@@ -163,10 +169,12 @@ const SCCheckout = (props: Props) => {
                 </AccordionItem>
 
                 <AccordionItem
+                  gap={2}
                   border={"none"}
-                  display={{ base: "none", md: "none", lg:"block" }}
+                  display={{ base: "none", md: "none", lg: "Flex" }}
+                  flexDir={"column"}
                 >
-                  <h2>
+                  <Flex as={"h2"}>
                     <AccordionButton
                       h={"60px"}
                       borderRadius={15}
@@ -181,8 +189,8 @@ const SCCheckout = (props: Props) => {
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
-                  </h2>
-                  <AccordionPanel>
+                  </Flex>
+                  <AccordionPanel bg={"white"}>
                     <Box>
                       <strong>Address:</strong> 123 Main Street, City, Country
                       <br />
@@ -320,7 +328,7 @@ const SCCheckout = (props: Props) => {
               </Accordion>
             </Stack>
           </Box>
-          <Stack flex={1} bg={"white"} p={5}>
+          <Stack flex={1} bg={"white"} p={5} spacing={3}>
             <Heading
               color={"dark3"}
               fontWeight={600}
@@ -345,7 +353,7 @@ const SCCheckout = (props: Props) => {
               />
             </Flex>
             <Divider />
-            <Box>
+            <Flex flexDirection={"column"} gap={5}>
               <Flex justifyContent={"space-between"} alignItems={"center"}>
                 <Text
                   fontSize="12px"
@@ -400,7 +408,7 @@ const SCCheckout = (props: Props) => {
                   {formatCurrency(tax)}
                 </Text>
               </Flex>
-            </Box>
+            </Flex>
             <Divider />
             <Stack spacing={5}>
               <Flex justifyContent={"space-between"} alignItems={"center"}>
@@ -420,7 +428,11 @@ const SCCheckout = (props: Props) => {
                   {formatCurrency(total)}
                 </Text>
               </Flex>
-              <Stack justifyContent={"center"} alignItems={"center"} spacing={0}>
+              <Stack
+                justifyContent={"center"}
+                alignItems={"center"}
+                spacing={5}
+              >
                 <Button
                   maxW={{ base: "150px", md: "271px" }}
                   w={"100%"}
@@ -432,38 +444,44 @@ const SCCheckout = (props: Props) => {
                 >
                   Place Order
                 </Button>
-                <Text
-                  fontWeight={500}
-                  fontSize={{ base: 9.5, md: 10 }}
-                  color={"dark3"}
-                >
-                  By placing an order,you agree to the isabella’s
-                </Text>
-                <Flex justifyContent={"center"} alignItems={"flex-end"} gap={1}>
+                <Box>
                   <Text
                     fontWeight={500}
-                    fontSize={{ base: 7, md: 8 }}
+                    fontSize={{ base: 9.5, md: 10 }}
                     color={"dark3"}
-                    textDecor={"underline"}
                   >
-                    Terms & Conditions
+                    By placing an order,you agree to the isabella’s
                   </Text>
-                  <Text
-                    fontWeight={500}
-                    fontSize={{ base: 7, md: 8 }}
-                    color={"#000000bb"}
+                  <Flex
+                    justifyContent={"center"}
+                    alignItems={"flex-end"}
+                    gap={1}
                   >
-                    and
-                  </Text>
-                  <Text
-                    fontWeight={500}
-                    fontSize={{ base: 7, md: 8 }}
-                    color={"dark3"}
-                    textDecor={"underline"}
-                  >
-                    Privacy Policy
-                  </Text>
-                </Flex>
+                    <Text
+                      fontWeight={500}
+                      fontSize={{ base: 7, md: 8 }}
+                      color={"dark3"}
+                      textDecor={"underline"}
+                    >
+                      Terms & Conditions
+                    </Text>
+                    <Text
+                      fontWeight={500}
+                      fontSize={{ base: 7, md: 8 }}
+                      color={"#000000bb"}
+                    >
+                      and
+                    </Text>
+                    <Text
+                      fontWeight={500}
+                      fontSize={{ base: 7, md: 8 }}
+                      color={"dark3"}
+                      textDecor={"underline"}
+                    >
+                      Privacy Policy
+                    </Text>
+                  </Flex>
+                </Box>
               </Stack>
               <Modal
                 closeOnOverlayClick={false}

@@ -1,7 +1,8 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Divider } from "@chakra-ui/react";
 import React from "react";
 import SCHeader from "../Header";
 import SCFooter from "../Footer";
+import SCMainFooter from "../Footer/SCMainFooter";
 
 type Props = {
   children: React.ReactNode;
@@ -14,7 +15,8 @@ const SCMainLayout = ({ children }: Props) => {
       <Box as="main" padding={1}>
         {children}
       </Box>
-      <SCFooter />
+
+      <SCMainFooter />
     </Box>
   );
 };

@@ -37,8 +37,13 @@ const SCProductCard = ({ product }: ProductCardProps) => {
         bg: "gray.50", // Background color on hover
       }}
     >
-      <CardBody p={3} >
-        <Box borderRadius="lg" overflow="hidden">
+      <CardBody p={3}>
+        <Box
+          borderRadius="lg"
+          overflow="hidden"
+          w={'full'}
+          h={{ base: "108px", md: "150px", lg: "192px" }} // Adjust height for different screen sizes
+        >
           <Image
             src={product.imagePath}
             alt={product.name}
@@ -46,7 +51,6 @@ const SCProductCard = ({ product }: ProductCardProps) => {
             objectPosition="center"
             w="full"
             h="full"
-            borderRadius="lg"
           />
         </Box>
         <Stack mt="1" spacing="1">

@@ -8,9 +8,12 @@ import {
   Divider,
   Flex,
   Heading,
+  HStack,
+  Spacer,
   Stack,
   Text,
   useToast,
+  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/navigation";
@@ -79,12 +82,13 @@ const SCCartSummaryCard = (props: Props) => {
           Order summary
         </Heading>
       </CardHeader>
-      <Divider color={"#D9D9D966"} />
+
+      <Divider color={"#4F4F4F40"} />
       <CardBody>
-        <Stack>
-          <Box>
+        <Stack spacing={5}>
+          <Flex flexDir={"column"} w={"full"} gap={5}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
-              <Text>sub total</Text>
+              <Text>Sub total</Text>
               <Text
                 fontSize={{ base: "15px", md: "20px" }}
                 fontWeight={500}
@@ -117,7 +121,7 @@ const SCCartSummaryCard = (props: Props) => {
               </Text>
             </Flex>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
-              <Text>shipping</Text>
+              <Text>Shipping</Text>
               <Text
                 fontSize={{ base: "15px", md: "20px" }}
                 fontWeight={500}
@@ -139,7 +143,7 @@ const SCCartSummaryCard = (props: Props) => {
                 {formatCurrency(total)}
               </Text>
             </Flex>
-          </Box>
+          </Flex>
 
           <Button
             onClick={handleCheckoutClick}
@@ -153,16 +157,23 @@ const SCCartSummaryCard = (props: Props) => {
           </Button>
         </Stack>
       </CardBody>
-      <Divider color={"#D9D9D966"} />
+      <Divider color={"#4F4F4F40"} />
       <CardFooter>
-        <Flex w={"full"} justifyContent={"space-between"} alignItems={"center"}>
-          <Text>Estimated Delivery by</Text>
+        <Flex
+          w={"full"}
+          justifyContent={"flex-start"}
+          alignItems={"center"}
+          gap={1}
+        >
+          <Text>Estimated Delivery by: </Text>
           <Text
+            as={"span"}
             fontSize={{ base: "15px", md: "20px" }}
             fontWeight={500}
             lineHeight="30px"
             textAlign="left"
           >
+            {" "}
             {getEstimatedDeliveryDate()}
           </Text>
         </Flex>

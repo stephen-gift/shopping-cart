@@ -8,7 +8,7 @@ type Props = {};
 const SCFooter = (props: Props) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   return (
-    <Flex justifyContent={"flex-start"} w={"full"} position="fixed" bottom={0}>
+    <Flex justifyContent={"flex-start"} w={"full"} position="fixed" bottom={0} zIndex={10}>
       <Button
         leftIcon={isMobile ? undefined : <Icon as={FiSettings} />}
         size="md"

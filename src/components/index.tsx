@@ -19,6 +19,7 @@ import SCCheckout from "./global/Checkout";
 import SCCheckoutProductCard from "./global/Card/SCCheckoutProductCard";
 import SCCheckoutProductCardList from "./global/Card/SCCheckoutProductCardList";
 import SCProductCartCardSkeleton from "./global/Skeleton/SCProductCartCardSkeleton ";
+import SCMainFooter from "./global/Footer/SCMainFooter";
 
 export {
   SCButton,
@@ -42,4 +43,5 @@ export {
   SCCheckoutProductCard,
   SCCheckoutProductCardList,
   SCProductCartCardSkeleton,
+  SCMainFooter,
 };
