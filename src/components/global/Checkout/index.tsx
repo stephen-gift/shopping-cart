@@ -433,17 +433,24 @@ const SCCheckout = (props: Props) => {
                 alignItems={"center"}
                 spacing={5}
               >
-                <Button
-                  maxW={{ base: "150px", md: "271px" }}
-                  w={"100%"}
-                  bg={"#000000CC"}
-                  onClick={onOpen}
-                  color={"white"}
-                  borderRadius={"lg"}
-                  _hover={{ bgColor: "#000000CC" }}
-                >
-                  Place Order
-                </Button>
+              <Button
+  maxW={{ base: "150px", md: "271px" }}
+  w={"100%"}
+  bg={"#000000CC"}
+  onClick={onOpen}
+  color={"white"}
+  borderRadius={"lg"}
+  transition="all 0.3s ease"
+  _hover={{
+    bg: "#83805E",
+    border: "2px solid #F0B303",
+    transform: "scale(1.05)",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
+  }}
+>
+  Place Order
+</Button>
+                
                 <Box>
                   <Text
                     fontWeight={500}
