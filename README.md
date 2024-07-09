@@ -1,5 +1,4 @@
-
-# E-commerce Website Implementation
+## E-commerce Website Implementation
 
 This project showcases a meticulously crafted, fully responsive, and statically generated e-commerce website designed according to specifications from Figma. Developed using Next.js and Chakra UI, it represents a pivotal stage 2 frontend task for the HNG Internship's Frontend Track.
 
@@ -21,9 +20,7 @@ This project showcases a meticulously crafted, fully responsive, and statically 
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-
 ## Overview
-
 
 ### Screenshot
 
@@ -45,7 +42,6 @@ This project showcases a meticulously crafted, fully responsive, and statically 
 
 - Live Site URL: [Online Shopping Cart](https://stephengift-shoppingcart.vercel.app/)
 - GitHub URL: [Repository](https://github.com/stephen-gift/bluetech-department-list.git)
-
 
 ## Technologies Used
 
@@ -71,20 +67,22 @@ This project showcases a meticulously crafted, fully responsive, and statically 
 - **Animations**: Implements smooth animations and transitions using Framer Motion.
 - **Intersection Observer**: Uses React Intersection Observer to optimize component rendering and visibility detection.
 
-
 ## Setup Instructions
 
 ### Clone the repository
+
 ```bash
 git clone https://github.com/stephen-gift/shopping-cart.git
 ```
 
 ### Install dependencies
+
 ```bash
 npm install
 ```
 
 ### Run the development server
+
 ```bash
 npm run dev
 ```
@@ -110,7 +108,7 @@ Challenges Faced
 - One of the main challenges was handling asynchronous data fetching and ensuring smooth state transitions.
 - Ensuring pixel-perfect implementation of the Figma design.
 - Managing state and ensuring responsive behavior across different devices.
-  
+
 I addressed these challenges through:
 
 - Careful state management using Zustand and Context API to handle asynchronous data and smooth state transitions.
@@ -174,7 +172,6 @@ Here are some valuable resources that have been instrumental in my professional 
 
 ## Author
 
-
 ### Developer
 
 - Portfolio - [Stephen Gift Dada](https://stephengift.vercel.app/)
@@ -184,12 +181,5 @@ Here are some valuable resources that have been instrumental in my professional 
 
 ### Designer
 
- - Behance - [Behance](https://www.behance.net/tracyboboye2)
-- Email - [tracyilliti@gmail.com](mailto:tracyilliti@gmail.com) 
-
-
-
-
-
-
-
+- Behance - [Behance](https://www.behance.net/tracyboboye2)
+- Email - [tracyilliti@gmail.com](mailto:tracyilliti@gmail.com)
