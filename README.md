@@ -184,9 +184,8 @@ Here are some valuable resources that have been instrumental in my professional 
 
 ### Designer
 
-<!-- - Portfolio - [Insert Designer's Portfolio](https://www.designerportfolio.com)
-- LinkedIn - [Designer's LinkedIn Profile](https://www.linkedin.com/in/designer-profile)
-- Email - [designer@example.com](mailto:designer@example.com) -->
+ - Behance - [Behance](https://www.behance.net/tracyboboye2)
+- Email - [tracyilliti@gmail.com](tracyilliti@gmail.com) 
 
 
 
