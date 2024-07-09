@@ -63,7 +63,7 @@ const SCCartSummaryCard = (props: Props) => {
         status: "warning",
         duration: 5000,
         isClosable: true,
-        position: "top",
+        position: "top-right",
       });
     } else {
       router.push("/checkout");

@@ -28,7 +28,7 @@ const SCCustomBreadCrumbs = ({ items }: BreadcrumbsProps) => {
         status: "warning",
         duration: 5000,
         isClosable: true,
-        position: "top",
+        position: "top-right",
       });
     } else {
       router.push("/checkout");
@@ -46,7 +46,7 @@ const SCCustomBreadCrumbs = ({ items }: BreadcrumbsProps) => {
                 e.preventDefault();
                 if (item.label === "2.Checkout") {
                   handleCheckoutClick();
-                }else if (item.label === "1.Cart"){
+                } else if (item.label === "1.Cart") {
                   router.push("/cart");
                 }
               }}

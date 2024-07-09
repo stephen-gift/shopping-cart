@@ -48,6 +48,11 @@ const SCAddToCart = ({ product }: Props) => {
             // border="0.5px solid #5A2C1799"
             bg={"#D9D9D9"}
             borderRadius={0}
+            _hover={{
+              bg: "#B0B0B0", // Change background color on hover
+              borderColor: "#5A2C1799", // Add border color on hover
+              borderWidth: "0.5px", // Define the border width on hover
+            }}
           >
             <AddIcon boxSize={2} />
           </Box>
