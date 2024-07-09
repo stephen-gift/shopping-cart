@@ -130,6 +130,7 @@ const SCCustomCarousel = () => {
 
   return (
     <Box
+    
       position="relative"
       w="full"
       h="325px"
