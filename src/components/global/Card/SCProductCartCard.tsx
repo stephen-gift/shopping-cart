@@ -34,8 +34,9 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
   return (
     <motion.div
       whileHover={{
-        scale: 1.02,
-        transition: { duration: 0.5 },
+        // scale: 1.0091,
+        // rotate: 5, // Rotates the element by 5 degrees on hover
+        // transition: { duration: 0.5 },
       }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -50,7 +51,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
         _hover={{
           boxShadow: "md",
           borderColor: "gray.200",
-          transform: "scale(1.01)", // Scale up by 2% on hover
+          // transform: "scale(1.01)", // Scale up by 2% on hover
           transition:
             "box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out",
           cursor: "pointer", // Optional: Change cursor on hover
@@ -76,7 +77,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
                 borderRadius="lg"
               />
             </Box>
-            
+
             <Stack spacing={1} w={"full"}>
               <Heading
                 fontSize={{ base: "15px", md: "22px" }} // Adjust font size for different breakpoints
