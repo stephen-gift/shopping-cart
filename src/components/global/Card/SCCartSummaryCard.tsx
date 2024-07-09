@@ -154,7 +154,6 @@ const SCCartSummaryCard = (props: Props) => {
   transition="all 0.3s ease"
   _hover={{
     bg: "#374382",
-    border: "1px solid #F0B303",
     transform: "translateY(-2px)",
     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)"
   }}
