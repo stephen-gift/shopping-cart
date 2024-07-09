@@ -80,6 +80,11 @@ const carouselItems = [
     image: "/images/Banner13.jpg",
     text: "Show More",
   },
+  {
+    id: 14,
+    image: "/images/Banner14.png",
+    text: "Show More",
+  },
 ];
 
 const MotionBox = motion(Box);
@@ -135,7 +140,6 @@ const SCCustomCarousel = () => {
 
   return (
     <Box
-    
       position="relative"
       w="full"
       h="325px"
