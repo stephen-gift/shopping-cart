@@ -499,7 +499,7 @@ const SCCheckout = (props: Props) => {
                   <ModalBody>
                     <Center>
                       <Image
-                        src="/Images/Logo.png"
+                        src="/images/Logo.png"
                         alt="Logo"
                         boxSize={100}
                         mb={{ base: 2, md: 4 }}
