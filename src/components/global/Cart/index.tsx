@@ -35,7 +35,7 @@ const SCCart = (props: Props) => {
           spacing={{ base: 8, md: 15, lg: 20 }}
         >
           <Box w={"full"} flex={1.5} overflowX="auto">
-            <Box maxH={["200px", "300px", "500px"]} overflowY="auto">
+            <Box maxH={["400px", "600px"]} overflowY="auto">
               <SCProductCartCardList products={products} />
             </Box>
           </Box>

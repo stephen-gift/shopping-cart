@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Card,
@@ -13,8 +13,8 @@ import {
   Square,
   Stack,
   Text,
-} from '@chakra-ui/react';
-import { DeleteIcon } from '@chakra-ui/icons';
+} from "@chakra-ui/react";
+import { DeleteIcon } from "@chakra-ui/icons";
 
 type Props = {
   disableAnimation?: boolean;
@@ -32,14 +32,36 @@ const SCProductCartCardSkeleton = ({ disableAnimation }: Props) => {
             borderRadius="lg"
             overflow="hidden"
           >
-            <Skeleton height="full" width="full" borderRadius="lg" speed={disableAnimation ? 0 : undefined} />
+            <Skeleton
+              height="full"
+              width="full"
+              borderRadius="lg"
+              speed={disableAnimation ? 0 : undefined}
+            />
           </Box>
           <Stack spacing={1} w={"full"}>
-            <Skeleton height={{ base: "15px", md: "22px" }} width="60%" speed={disableAnimation ? 0 : undefined} />
-            <Flex justifyContent={"flex-start"} alignItems={"center"} gap={1} flexWrap={'wrap'}>
-              <SkeletonText noOfLines={1} width="40%" speed={disableAnimation ? 0 : undefined} />
+            <Skeleton
+              height={{ base: "15px", md: "22px" }}
+              width="60%"
+              speed={disableAnimation ? 0 : undefined}
+            />
+            <Flex
+              justifyContent={"flex-start"}
+              alignItems={"center"}
+              gap={1}
+              flexWrap={"wrap"}
+            >
+              <SkeletonText
+                noOfLines={1}
+                width="40%"
+                speed={disableAnimation ? 0 : undefined}
+              />
               <Text>/</Text>
-              <SkeletonText noOfLines={1} width="40%" speed={disableAnimation ? 0 : undefined} />
+              <SkeletonText
+                noOfLines={1}
+                width="40%"
+                speed={disableAnimation ? 0 : undefined}
+              />
             </Flex>
             <Flex
               justifyContent={"space-between"}
@@ -50,7 +72,11 @@ const SCProductCartCardSkeleton = ({ disableAnimation }: Props) => {
                 <Square size="15px" bg="gray.200" mr="2px" />
                 <Square size="15px" bg="gray.200" />
               </Flex>
-              <Skeleton height={{ base: "15px", md: "20px" }} width="20%" speed={disableAnimation ? 0 : undefined} />
+              <Skeleton
+                height={{ base: "15px", md: "20px" }}
+                width="20%"
+                speed={disableAnimation ? 0 : undefined}
+              />
             </Flex>
           </Stack>
         </HStack>
@@ -58,7 +84,11 @@ const SCProductCartCardSkeleton = ({ disableAnimation }: Props) => {
       <Divider color={"#B7B8BC"} />
       <CardFooter>
         <Flex w={"full"} justifyContent={"space-between"} alignItems={"center"}>
-          <Skeleton height="40px" width="100px" speed={disableAnimation ? 0 : undefined} />
+          <Skeleton
+            height="40px"
+            width="100px"
+            speed={disableAnimation ? 0 : undefined}
+          />
           <IconButton
             aria-label="delete Product"
             icon={<DeleteIcon />}

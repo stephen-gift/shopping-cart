@@ -61,7 +61,7 @@ const SCCartSummaryCard = (props: Props) => {
         title: "Your cart is empty.",
         description: "Please go to the homepage to add items to your cart.",
         status: "warning",
-        duration: 5000,
+        duration: 3000,
         isClosable: true,
         position: "top-right",
       });
