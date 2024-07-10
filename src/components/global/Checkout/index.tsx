@@ -440,6 +440,7 @@ const SCCheckout = (props: Props) => {
                   onClick={onOpen}
                   color={"white"}
                   borderRadius={"lg"}
+                  _hover={{bg:'#5A2C17'}}
                 >
                   Place Order
                 </Button>

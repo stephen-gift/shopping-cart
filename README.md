@@ -24,19 +24,23 @@ This project showcases a meticulously crafted, fully responsive, and statically 
 
 ### Screenshot
 
-![Example UI Screenshot 1](/images/Screenshot.png)
+![Example UI Screenshot 1](/images/screenshots/Cart.png)
 
-![Example UI Screenshot 2](/images/Screenshot-10perPage.png)
+![Example UI Screenshot 2](/images/screenshots/Checkout_successful.png)
 
-![Example UI Screenshot 4](/images/Screenshot-with-search.png)
+![Example UI Screenshot 4](/images/screenshots/Checkout.png)
 
-![Example UI Screenshot 3](/images/Screenshot-darkMode.png)
+![Example UI Screenshot 3](/images/screenshots/Homepage.png)
 
-![Example UI Screenshot 5](/images/Screenshot-mobile.png)
+![Example UI Screenshot 5](/images/screenshots/Mobile_Cart.png)
 
-![Example UI Screenshot 6](/images/Screenshot-mobile-with-nav.png)
+![Example UI Screenshot 6](/images/screenshots/Mobile_Checkout.png)
 
-![Example UI Screenshot 7](/images/Screenshot-mobile-with-nav-active.png)
+![Example UI Screenshot 7](/images/screenshots/Mobile_with_Nav.png)
+
+![Example UI Screenshot 7](/images/screenshots/Mobile.png)
+
+![Example UI Screenshot 7](/images/screenshots/Product_Active_State.png)
 
 ### Links
 
@@ -47,7 +51,6 @@ This project showcases a meticulously crafted, fully responsive, and statically 
 
 - **Next.js** - A React framework for building server-rendered and statically generated web applications.
 - **Chakra UI** - A flexible and accessible UI component library for React.
-- **Axios** - A promise-based HTTP client for making API requests.
 - **TypeScript** - A superset of JavaScript that adds static types for better code quality and development experience.
 - **React Toastify** - A React component for displaying toast notifications.
 - **React Icons** - A library for including popular icons in React applications.
@@ -121,7 +124,6 @@ The project was built using the following technologies:
 
 - Next.js
 - Chakra UI
-- Axios
 - TypeScript
 - Chakra Icons
 - Framer Motion
@@ -175,7 +177,7 @@ Here are some valuable resources that have been instrumental in my professional 
 ### Developer
 
 - Portfolio - [Stephen Gift Dada](https://stephengift.vercel.app/)
-- LinkedIn - [Your LinkedIn Profile](https://www.linkedin.com/in/stephen-gift-8894131b6)
+- LinkedIn - [LinkedIn Profile](https://www.linkedin.com/in/stephen-gift-8894131b6)
 - GitHub - [@stephen-gift](https://github.com/stephen-gift)
 - Email - [stephengift43@gmail.com](mailto:stephengift43@gmail.com)
 
