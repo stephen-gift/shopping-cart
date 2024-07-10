@@ -52,7 +52,7 @@ const SCProductCartCardList = ({ products }: SCProductCartCardListProps) => {
             
             {Array.from({ length: 1 }).map((_, index) => (
               <Box key={index} mb={4}>
-                <SCProductCartCardSkeleton />
+                <SCProductCartCardSkeleton disableAnimation={true}  />
               </Box>
             ))}
             <Link href="/">
