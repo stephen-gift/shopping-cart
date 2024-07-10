@@ -24,23 +24,57 @@ This project showcases a meticulously crafted, fully responsive, and statically 
 
 ### Screenshot
 
-![Example UI Screenshot 1](/images/screenshots/Cart.png)
+#### Homepage
 
-![Example UI Screenshot 2](/images/screenshots/Checkout_successful.png)
+![Homepage](/public/images/screenshots/Homepage.png)
 
-![Example UI Screenshot 4](/images/screenshots/Checkout.png)
+---
 
-![Example UI Screenshot 3](/images/screenshots/Homepage.png)
+#### Product Active State
 
-![Example UI Screenshot 5](/images/screenshots/Mobile_Cart.png)
+![Product Active State](/public/images/screenshots/Product_Active_State.png)
 
-![Example UI Screenshot 6](/images/screenshots/Mobile_Checkout.png)
+---
 
-![Example UI Screenshot 7](/images/screenshots/Mobile_with_Nav.png)
+#### Cart
 
-![Example UI Screenshot 7](/images/screenshots/Mobile.png)
+![Cart](/public/images/screenshots/Cart.png)
 
-![Example UI Screenshot 7](/images/screenshots/Product_Active_State.png)
+---
+
+#### Checkout
+
+![Checkout](/public/images/screenshots/Checkout.png)
+
+---
+
+#### Checkout Successful
+
+![Checkout Successful](/public/images/screenshots/Checkout_successful.png)
+
+---
+
+#### Mobile View
+
+![Mobile View](/public/images/screenshots/Mobile.png)
+
+---
+
+#### Mobile with Navigation
+
+![Mobile with Navigation](/public/images/screenshots/Mobile_with_Nav.png)
+
+---
+
+#### Mobile Cart
+
+![Mobile Cart](/public/images/screenshots/Mobile_Cart.png)
+
+---
+
+#### Mobile Checkout
+
+![Mobile Checkout](/public/images/screenshots/Mobile_Checkout.png)
 
 ### Links
 
