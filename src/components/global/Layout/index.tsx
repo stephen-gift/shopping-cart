@@ -12,7 +12,7 @@ const SCMainLayout = ({ children }: Props) => {
   return (
     <Box>
       <SCHeader />
-      <Box as="main" padding={1}>
+      <Box as="main" padding={1} mt={'76px'}>
         {children}
       </Box>
 

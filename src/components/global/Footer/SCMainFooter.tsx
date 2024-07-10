@@ -28,7 +28,7 @@ const SCMainFooter = (props: Props) => {
       {/* <SCFooter /> */}
       <Flex direction={["row", "row", "row"]} justify="space-between" gap={6}>
         <Flex w={"full"} direction={["column", "column", "column"]}>
-          <Flex>
+          <Flex gap={[5, 8, 10]}>
             <VStack align="start" spacing={0} flex="2" w={"full"}>
               <Text
                 fontWeight="600"

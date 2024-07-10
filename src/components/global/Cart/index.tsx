@@ -39,7 +39,7 @@ const SCCart = (props: Props) => {
               <SCProductCartCardList products={products} />
             </Box>
           </Box>
-          <Stack flex={1}>
+          <Stack flex={1} p={[2, 4, 6]}>
             <SCCartSummaryCard />
             {/* <SCCartCouponCard /> */}
           </Stack>

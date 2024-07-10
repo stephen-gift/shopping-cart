@@ -78,6 +78,14 @@ const SCHeader = (props: Props) => {
       p={2}
       borderBottom={"1px"}
       borderBottomColor={"#BE827DB2"}
+      pos={"fixed"}
+      position="fixed"
+      top={0}
+      left={0}
+      right={0}
+      zIndex={1000}
+      bg={colorMode === "light" ? "white" : "gray.800"}
+      boxShadow="sm"
     >
       <Flex justifyContent={"center"} alignItems={"center"} gap={5}>
         <Square size={"72px"} display={{ base: "none", md: "flex" }}>
@@ -205,7 +213,7 @@ const SCHeader = (props: Props) => {
                 Object.keys(grouped).map((id) => {
                   const item = grouped[id][0];
                   return (
-                    <UnorderedList listStyleType={'none'} key={id}>
+                    <UnorderedList listStyleType={"none"} key={id}>
                       <ListItem>
                         <ListIcon as={CheckCircleIcon} color="green.500" />
                         {item.name}
