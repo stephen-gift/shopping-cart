@@ -227,7 +227,7 @@ const SCHeader = (props: Props) => {
                   <Stack spacing={2}>
                     {/* Skeleton components for visual consistency */}
                     {Array.from({ length: 3 }).map((_, index) => (
-                      <Skeleton key={index} height="20px" />
+                      <Skeleton speed="0" key={index} height="20px" />
                     ))}
                   </Stack>
                   <Button
