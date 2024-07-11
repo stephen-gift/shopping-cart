@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import "@/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -29,7 +30,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   );
