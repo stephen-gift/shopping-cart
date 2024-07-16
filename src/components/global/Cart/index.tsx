@@ -11,13 +11,17 @@ import {
 import React from "react";
 import SCCustomBreadCrumbs from "../BreadCrumb";
 import SCProductCartCardList from "../Card/SCProductCartCardList";
-import products from "@/data/products";
+// import products from "@/data/products";
 import SCCartSummaryCard from "../Card/SCCartSummaryCard";
 import SCCartCouponCard from "../Card/SCCartCouponCard";
+import { Product } from "../../../../types/singleProduct";
 
-type Props = {};
+// type Props = {};
+interface Props {
+  products: Product[]; // Assuming products are passed as props
+}
 
-const SCCart = (props: Props) => {
+const SCCart = ({ products }: Props) => {
   const breadcrumbs = [
     { label: "1.Cart", isCurrentPage: true },
     { label: "2.Checkout", href: "/checkout" },
