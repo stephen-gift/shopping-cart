@@ -1,7 +1,6 @@
 import { Box, Button, Center, Flex, Text, useToast } from "@chakra-ui/react";
 import React from "react";
 import { useCartStore } from "../../../../store";
-// import { Product } from "../../../../types/Pr";
 import SCRemoveFromCart from "./RemoveFromCart";
 import { AddIcon } from "@chakra-ui/icons";
 import { Product } from "../../../../types/singleProduct";

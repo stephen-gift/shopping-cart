@@ -17,10 +17,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import SCAddToCart from "../Button/AddToCart";
-import products from "@/data/products";
+// import products from "@/data/products";
 import { Product } from "../../../../types/singleProduct";
 import { DeleteIcon } from "@chakra-ui/icons";
-import { deleteProductById } from "@/lib/deleteProductById";
+// import { deleteProductById } from "@/lib/deleteProductById";
 import { motion } from "framer-motion";
 import { formatNumberWithCommas } from "@/lib/formatNumbersWithCommas";
 
@@ -30,7 +30,7 @@ interface ProductCartCardProps {
 }
 const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
   const toast = useToast();
-  const updatedProducts = deleteProductById(products, "2");
+  // const updatedProducts = deleteProductById(product, "2");
   const handleDelete = () => {
     onDelete(product.id); // Call onDelete callback with product id
     toast({

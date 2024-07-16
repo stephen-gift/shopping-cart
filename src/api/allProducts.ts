@@ -1,5 +1,4 @@
 import axios from "axios";
-import { ProductsResponse } from "../../types/products";
 import { Product } from "../../types/singleProduct";
 
 // Define the base URL and API key as constants
@@ -16,10 +15,7 @@ interface ApiResponse {
 // : Promise<ApiResponse>
 
 // Function to fetch products
-export const fetchProducts = async (
-  page: number,
-  size: number
-) => {
+export const fetchProducts = async (page: number, size: number) => {
   try {
     const response = await axios.get(BASE_URL, {
       params: {

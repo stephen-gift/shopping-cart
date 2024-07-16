@@ -1,4 +1,4 @@
-import { Product, Review } from "../../types/Pr";
+import { Product, Review } from "../../types/global";
 
 // Sample reviews for demonstration
 const sampleReviews: Review[] = [
