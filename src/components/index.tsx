@@ -20,6 +20,7 @@ import SCCheckoutProductCard from "./global/Card/SCCheckoutProductCard";
 import SCCheckoutProductCardList from "./global/Card/SCCheckoutProductCardList";
 import SCProductCartCardSkeleton from "./global/Skeleton/SCProductCartCardSkeleton ";
 import SCMainFooter from "./global/Footer/SCMainFooter";
+import ProductImageCarousel from "./global/Carousel/ProductImageCarousel";
 
 export {
   SCButton,
@@ -43,5 +44,6 @@ export {
   SCCheckoutProductCard,
   SCCheckoutProductCardList,
   SCProductCartCardSkeleton,
-  SCMainFooter,
+  SCMainFooter,ProductImageCarousel
 };
+

@@ -1,6 +1,6 @@
-import React from "react";
-import { Product } from "../../../../types/global";
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { Product } from "../../../../types/singleProduct";
+import { Box, Center, SimpleGrid, Spinner } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SCProductCard from ".";
@@ -10,20 +10,38 @@ interface SCProductListProps {
 }
 
 const SCProductList = ({ products }: SCProductListProps) => {
+  const [loading, setLoading] = useState(true);
+
+  // Simulating loading delay for demonstration
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the delay time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <SimpleGrid
-      columns={{ base: 2, md: 3, lg: 5 }}
-      spacing={{ base: "9px", md: "16px", lg: "27px" }}
-      p={{ base: 3, md: 5, lg: 5 }}
-    >
-      {products.map((product, index) => (
-        <ProductCardWithScrollAnimation
-          key={product.id}
-          product={product}
-          index={index}
-        />
-      ))}
-    </SimpleGrid>
+    <>
+    {loading ? (
+      <Center mt={10}>
+        <Spinner size="xl" />
+      </Center>
+    ) : (
+      <SimpleGrid
+        columns={{ base: 2, md: 3, lg: 5 }}
+        spacing={{ base: "9px", md: "16px", lg: "27px" }}
+        p={{ base: 3, md: 5, lg: 5 }}
+      >
+        {products.map((product, index) => (
+          <ProductCardWithScrollAnimation
+            key={product.id}
+            product={product}
+            index={index}
+          />
+        ))}
+      </SimpleGrid>
+    )}
+  </>
   );
 };
 

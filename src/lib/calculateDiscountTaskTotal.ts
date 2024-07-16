@@ -17,5 +17,5 @@ export function calculateDiscountTaxTotal(
 }
 
 export function formatCurrency(value: number): string {
-  return `$ ${value.toFixed(2)}`;
+  return `₦ ${value.toFixed(2)}`;
 }

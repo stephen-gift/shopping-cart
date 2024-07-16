@@ -1,9 +1,10 @@
 import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useCartStore } from "../../../../store";
-import { Product } from "../../../../types/global";
+// import { Product } from "../../../../types/Pr";
 import SCRemoveFromCart from "./RemoveFromCart";
 import { AddIcon } from "@chakra-ui/icons";
+import { Product } from "../../../../types/singleProduct";
 
 type Props = {
   product: Product;

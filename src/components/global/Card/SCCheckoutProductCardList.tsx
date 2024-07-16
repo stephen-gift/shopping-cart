@@ -1,9 +1,9 @@
 import React from "react";
-import { Product } from "../../../../types/global";
 import { useCartStore } from "../../../../store";
 import { groupById } from "@/lib/groupById";
 import { Box, Stack, Text } from "@chakra-ui/react";
 import SCCheckoutProductCard from "./SCCheckoutProductCard";
+import { Product } from "../../../../types/singleProduct";
 
 interface SCProductCheckoutCardListProps {
   products: Product[];

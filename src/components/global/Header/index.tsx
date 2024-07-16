@@ -45,7 +45,7 @@ import {
 import React, { useState } from "react";
 import { BiCart, BiUser } from "react-icons/bi";
 import { useCartStore } from "../../../../store";
-import { getCartTotal } from "@/lib/getCartTotal";
+import { calculateTotalPrice } from "@/lib/getCartTotal";
 import { useRouter } from "next/navigation";
 import { groupById } from "@/lib/groupById";
 
@@ -55,7 +55,7 @@ const SCHeader = (props: Props) => {
   const router = useRouter();
   const [showSearch, setShowSearch] = useState(false);
   const cart = useCartStore((state) => state.cart);
-  const total = getCartTotal(cart);
+  const total = calculateTotalPrice(cart);
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {

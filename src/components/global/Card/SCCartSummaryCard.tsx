@@ -18,7 +18,7 @@ import {
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "../../../../store";
-import { getCartTotal } from "@/lib/getCartTotal";
+import { calculateTotalPrice } from "@/lib/getCartTotal";
 import { calculateDiscountTaxTotal } from "@/lib/calculateDiscountTaskTotal";
 
 type Props = {};
@@ -28,7 +28,7 @@ const SCCartSummaryCard = (props: Props) => {
   const toast = useToast();
 
   const cart = useCartStore((state) => state.cart);
-  const subTotal: number = getCartTotal(cart);
+  const subTotal: number = calculateTotalPrice(cart);
 
   // Define discount and tax rates
   const discountRate = 0.1; // 10% discount
@@ -42,7 +42,7 @@ const SCCartSummaryCard = (props: Props) => {
   );
 
   const formatCurrency = (value: number) => {
-    return `$ ${value.toFixed(2)}`;
+    return `₦ ${value.toFixed(2)}`;
   };
 
   const getEstimatedDeliveryDate = () => {

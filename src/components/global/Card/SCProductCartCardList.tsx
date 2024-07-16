@@ -1,6 +1,6 @@
 import { Box, Button, Link, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { Product } from "../../../../types/global";
+import { Product } from "../../../../types/Pr";
 import SCProductCartCard from "./SCProductCartCard";
 import { useCartStore } from "../../../../store";
 import { groupById } from "@/lib/groupById";
@@ -49,10 +49,10 @@ const SCProductCartCardList = ({ products }: SCProductCartCardListProps) => {
               Your cart is empty. Please go to the home page to add items to
               your cart.
             </Text>
-            
+
             {Array.from({ length: 1 }).map((_, index) => (
               <Box key={index} mb={4}>
-                <SCProductCartCardSkeleton disableAnimation={true}  />
+                <SCProductCartCardSkeleton disableAnimation={true} />
               </Box>
             ))}
             <Link href="/">

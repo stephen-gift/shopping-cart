@@ -16,8 +16,8 @@ import {
 import React from "react";
 import SCAddToCart from "../Button/AddToCart";
 import { DeleteIcon } from "@chakra-ui/icons";
-import { Product } from "../../../../types/global";
 import { useCartStore } from "../../../../store";
+import { Product } from "../../../../types/singleProduct";
 
 interface ProductCheckoutCardProps {
   product: Product;
@@ -29,6 +29,18 @@ const SCCheckoutProductCard = ({ product }: ProductCheckoutCardProps) => {
   const howManyInCart = cart.filter(
     (item) => item.name === product.name
   ).length;
+
+  const baseImageUrl = "https://api.timbu.cloud/images";
+
+  // Get the first image from the photos array
+  const imageUrl =
+    product.photos?.length > 0
+      ? `${baseImageUrl}/${product.photos[0].url}`
+      : "";
+
+  // Get the price in NGN from the current_price array
+  const priceNGN = product.current_price?.[0]?.NGN[0] || 0;
+
   return (
     <Card w={"full"} bg={"none"} boxShadow={"none"}>
       <CardBody w={"full"} bg={"none"} p={1}>
@@ -41,7 +53,7 @@ const SCCheckoutProductCard = ({ product }: ProductCheckoutCardProps) => {
             overflow="hidden"
           >
             <Image
-              src={product.imagePath}
+              src={imageUrl}
               alt={product.name}
               objectFit="cover"
               objectPosition="center"
@@ -64,7 +76,7 @@ const SCCheckoutProductCard = ({ product }: ProductCheckoutCardProps) => {
                 color={"dark3"}
                 fontSize={{ base: "13px", md: "15px" }} // Adjust font size for different breakpoints
               >
-                ${product.price.toFixed(2)}
+                ₦{priceNGN.toFixed(2)}
               </Text>
             </Flex>
             <Text
@@ -79,7 +91,7 @@ const SCCheckoutProductCard = ({ product }: ProductCheckoutCardProps) => {
               color={"dark3"}
               fontSize={{ base: "10px", md: "12px" }} // Adjust font size for different breakpoints
             >
-              Size: {product.availableSizes.join(", ")}
+              Size: {product.available_quantity}
             </Text>
             <Text
               fontWeight={500}

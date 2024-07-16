@@ -17,7 +17,7 @@ import {
 import React from "react";
 import SCAddToCart from "../Button/AddToCart";
 import products from "@/data/products";
-import { Product } from "../../../../types/global";
+import { Product } from "../../../../types/singleProduct";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { deleteProductById } from "@/lib/deleteProductById";
 import { motion } from "framer-motion";
@@ -31,13 +31,23 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
   const handleDelete = () => {
     onDelete(product.id); // Call onDelete callback with product id
   };
+  const baseImageUrl = "https://api.timbu.cloud/images";
+   // Get the first image from the photos array
+   const imageUrl =
+   product.photos?.length > 0 ? `${baseImageUrl}/${product.photos[0].url}` : "";
+
+ // Get the price in NGN from the current_price array
+ const priceNGN = product.current_price?.[0]?.NGN[0] || 0;
+
   return (
     <motion.div
-      whileHover={{
-        // scale: 1.0091,
-        // rotate: 5, // Rotates the element by 5 degrees on hover
-        // transition: { duration: 0.5 },
-      }}
+      whileHover={
+        {
+          // scale: 1.0091,
+          // rotate: 5, // Rotates the element by 5 degrees on hover
+          // transition: { duration: 0.5 },
+        }
+      }
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
@@ -68,7 +78,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
               overflow="hidden"
             >
               <Image
-                src={product.imagePath}
+                src={imageUrl}
                 alt={product.name}
                 objectFit="cover"
                 objectPosition="center"
@@ -98,7 +108,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
                   lineHeight={{ base: "12px", md: "18px" }}
                   color="#00000080"
                 >
-                  Size:{" "}
+                  Qty:{" "}
                   <Text
                     fontSize={{ base: "14px", md: "20px" }}
                     fontWeight={600}
@@ -106,7 +116,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
                     isTruncated
                     maxW={"70px"}
                   >
-                    {product.availableSizes.join(", ")}
+                    {product.available_quantity}
                   </Text>
                 </Text>
                 <Text>/</Text>
@@ -119,13 +129,13 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
                   lineHeight={{ base: "12px", md: "18px" }}
                   color="#00000080"
                 >
-                  Color:
+                  Desc.:
                   <Text
                     fontSize={{ base: "14px", md: "20px" }}
                     fontWeight={600}
                     color={"dark3"}
                   >
-                    {product.colorName}
+                    {product.description}
                   </Text>
                 </Text>
               </Flex>
@@ -135,17 +145,17 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
                 alignItems={"center"}
                 w={"full"}
               >
-                <Flex justifyContent={"center"} alignItems={"center"}>
+                {/* <Flex justifyContent={"center"} alignItems={"center"}>
                   <Square size="15px" bg={product.colors.primary} mr="2px" />
                   <Square size="15px" bg={product.colors.secondary} />
-                </Flex>
+                </Flex> */}
                 <Text
                   fontSize={{ base: "15px", md: "20px" }}
                   fontWeight={500}
                   lineHeight={{ base: "22px", md: "20px" }}
                   color="#000000CC"
                 >
-                  ${product.price.toFixed(2)}
+                  ₦{priceNGN.toFixed(2)}
                 </Text>
               </Flex>
             </Stack>

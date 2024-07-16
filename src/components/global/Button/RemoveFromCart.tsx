@@ -1,8 +1,8 @@
 import { Box, Button } from "@chakra-ui/react";
 import React from "react";
-import { Product } from "../../../../types/global";
 import { useCartStore } from "../../../../store";
 import { MinusIcon } from "@chakra-ui/icons";
+import { Product } from "../../../../types/singleProduct";
 
 type Props = {};
 
