@@ -20,6 +20,7 @@ import { useRouter } from "next/navigation";
 import { useCartStore } from "../../../../store";
 import { calculateTotalPrice } from "@/lib/getCartTotal";
 import { calculateDiscountTaxTotal } from "@/lib/calculateDiscountTaskTotal";
+import { formatNumberWithCommas } from "@/lib/formatNumbersWithCommas";
 
 type Props = {};
 
@@ -42,7 +43,7 @@ const SCCartSummaryCard = (props: Props) => {
   );
 
   const formatCurrency = (value: number) => {
-    return `₦ ${value.toFixed(2)}`;
+    return `₦ ${formatNumberWithCommas(value.toFixed(2))}`;
   };
 
   const getEstimatedDeliveryDate = () => {

@@ -13,6 +13,7 @@ import {
   Stack,
   StackDivider,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
 import SCAddToCart from "../Button/AddToCart";
@@ -21,23 +22,35 @@ import { Product } from "../../../../types/singleProduct";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { deleteProductById } from "@/lib/deleteProductById";
 import { motion } from "framer-motion";
+import { formatNumberWithCommas } from "@/lib/formatNumbersWithCommas";
 
 interface ProductCartCardProps {
   product: Product;
   onDelete: (productId: string) => void; // Callback function for deleting a product
 }
 const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
+  const toast = useToast();
   const updatedProducts = deleteProductById(products, "2");
   const handleDelete = () => {
     onDelete(product.id); // Call onDelete callback with product id
+    toast({
+      title: "Product Deleted.",
+      description: `${product.name} has been deleted from your cart.`,
+      status: "warning",
+      duration: 3000,
+      isClosable: true,
+      position: "top-right",
+    });
   };
   const baseImageUrl = "https://api.timbu.cloud/images";
-   // Get the first image from the photos array
-   const imageUrl =
-   product.photos?.length > 0 ? `${baseImageUrl}/${product.photos[0].url}` : "";
+  // Get the first image from the photos array
+  const imageUrl =
+    product.photos?.length > 0
+      ? `${baseImageUrl}/${product.photos[0].url}`
+      : "";
 
- // Get the price in NGN from the current_price array
- const priceNGN = product.current_price?.[0]?.NGN[0] || 0;
+  // Get the price in NGN from the current_price array
+  const priceNGN = product.current_price?.[0]?.NGN[0] || 0;
 
   return (
     <motion.div
@@ -155,7 +168,7 @@ const SCProductCartCard = ({ product, onDelete }: ProductCartCardProps) => {
                   lineHeight={{ base: "22px", md: "20px" }}
                   color="#000000CC"
                 >
-                  ₦{priceNGN.toFixed(2)}
+                  ₦{formatNumberWithCommas(priceNGN.toFixed(2))}
                 </Text>
               </Flex>
             </Stack>

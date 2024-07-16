@@ -41,6 +41,7 @@ import { calculateDiscountTaxTotal } from "@/lib/calculateDiscountTaskTotal";
 import { useCartStore } from "../../../../store";
 import { calculateTotalPrice } from "@/lib/getCartTotal";
 import { useRouter } from "next/navigation";
+import { formatNumberWithCommas } from "@/lib/formatNumbersWithCommas";
 
 type Props = {};
 interface ContactInfo {
@@ -127,7 +128,7 @@ const SCCheckout = (props: Props) => {
   );
 
   const formatCurrency = (value: number) => {
-    return `₦ ${value.toFixed(2)}`;
+    return `₦ ${formatNumberWithCommas(value.toFixed(2))}`;
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

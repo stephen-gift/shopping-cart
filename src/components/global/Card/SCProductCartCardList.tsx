@@ -1,11 +1,11 @@
 import { Box, Button, Link, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { Product } from "../../../../types/Pr";
 import SCProductCartCard from "./SCProductCartCard";
 import { useCartStore } from "../../../../store";
 import { groupById } from "@/lib/groupById";
 import { deleteProductById } from "@/lib/deleteProductById";
 import SCProductCartCardSkeleton from "../Skeleton/SCProductCartCardSkeleton ";
+import { Product } from "../../../../types/singleProduct";
 
 interface SCProductCartCardListProps {
   products: Product[];

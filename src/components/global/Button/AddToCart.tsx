@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, Text, useToast } from "@chakra-ui/react";
 import React from "react";
 import { useCartStore } from "../../../../store";
 // import { Product } from "../../../../types/Pr";
@@ -15,14 +15,21 @@ const SCAddToCart = ({ product }: Props) => {
     state.cart,
     state.addToCart,
   ]);
-
+  const toast = useToast();
   const howManyInCart = cart.filter((item) => item.id === product.id).length;
 
   const handleAdd = () => {
     console.log("Adding to cart", product);
     addToCart(product);
+    toast({
+      title: "Item added to cart.",
+      description: `${product.name} has been added to your cart.`,
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+      position:'top'
+    });
   };
-
   if (howManyInCart > 0) {
     return (
       <Flex justifyContent={"center"} alignItems={"center"}>

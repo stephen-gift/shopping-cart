@@ -18,6 +18,7 @@ import SCAddToCart from "../Button/AddToCart";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { useCartStore } from "../../../../store";
 import { Product } from "../../../../types/singleProduct";
+import { formatNumberWithCommas } from "@/lib/formatNumbersWithCommas";
 
 interface ProductCheckoutCardProps {
   product: Product;
@@ -76,7 +77,7 @@ const SCCheckoutProductCard = ({ product }: ProductCheckoutCardProps) => {
                 color={"dark3"}
                 fontSize={{ base: "13px", md: "15px" }} // Adjust font size for different breakpoints
               >
-                ₦{priceNGN.toFixed(2)}
+                ₦{formatNumberWithCommas(priceNGN.toFixed(2))}
               </Text>
             </Flex>
             <Text

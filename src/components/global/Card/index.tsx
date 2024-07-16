@@ -28,6 +28,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { fetchProductById } from "@/api/singleProduct";
 import ProductImageCarousel from "../Carousel/ProductImageCarousel";
+import { formatNumberWithCommas } from "@/lib/formatNumbersWithCommas";
 
 interface ProductCardProps {
   product: Product;
@@ -143,7 +144,7 @@ const SCProductCard = ({ product }: ProductCardProps) => {
                   fontWeight={500}
                   color="#000000CC"
                 >
-                  ₦{priceNGN.toFixed(2)}
+                  ₦{formatNumberWithCommas(priceNGN.toFixed(2))}
                 </Text>
               </Flex>
 
@@ -178,7 +179,7 @@ const SCProductCard = ({ product }: ProductCardProps) => {
               }
             />
             <Text>{modalProduct?.description}</Text>
-            <Text>Price: ₦{modalProduct && priceNGN.toFixed(2)}</Text>
+            <Text>Price: ₦{modalProduct && formatNumberWithCommas(priceNGN.toFixed(2)) }</Text>
           </ModalBody>
           <ModalFooter>
             {/* <Button colorScheme="blue" mr={3} onClick={onClose}>

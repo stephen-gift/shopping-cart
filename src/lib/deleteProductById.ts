@@ -1,4 +1,4 @@
-import { Product } from "../../types/global";
+import { Product } from "../../types/singleProduct";
 
 // Function to delete a product by id
 export function deleteProductById(

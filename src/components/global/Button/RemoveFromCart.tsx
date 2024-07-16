@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, useToast } from "@chakra-ui/react";
 import React from "react";
 import { useCartStore } from "../../../../store";
 import { MinusIcon } from "@chakra-ui/icons";
@@ -9,8 +9,17 @@ type Props = {};
 const SCRemoveFromCart = ({ product }: { product: Product }) => {
   const removeFromCart = useCartStore((state) => state.removeFromCart);
 
+  const toast = useToast();
   const handleRemove = () => {
     removeFromCart(product);
+    toast({
+      title: "Item removed from cart.",
+      description: `${product.name} has been removed from your cart.`,
+      status: "warning",
+      duration: 3000,
+      isClosable: true,
+      position: "top",
+    });
   };
 
   return (
