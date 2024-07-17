@@ -2,7 +2,8 @@ import axios from "axios";
 import { Product } from "../../types/singleProduct";
 
 // Define the base URL and API key as constants
-const BASE_URL = "https://timbu-get-single-product.reavdev.workers.dev/";
+// const BASE_URL = "https://timbu-get-single-product.reavdev.workers.dev/";
+const BASE_URL = "https://api.timbu.cloud/products";
 const ORGANIZATION_ID = "ce1da40dce9f479a8df0bbafa2ab70be";
 const APPID = "B0CQ0BFYMWHFAU7";
 const APIKEY = "ef92591846c74a1f99d664feae97687f20240712153408182398";

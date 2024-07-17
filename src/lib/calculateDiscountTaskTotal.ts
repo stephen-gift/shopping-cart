@@ -1,4 +1,4 @@
-import { formatNumberWithCommas } from "./formatNumbersWithCommas";
+// import { formatNumberWithCommas } from "./formatNumbersWithCommas";
 
 type CalculationResult = {
   discount: number;
@@ -18,6 +18,6 @@ export function calculateDiscountTaxTotal(
   return { discount, tax, total };
 }
 
-export function formatCurrency(value: number): string {
-  return `₦ ${formatNumberWithCommas(value.toFixed(2))}`;
-}
+// export function formatCurrency(value: number): string {
+//   return `₦ ${formatNumberWithCommas(value.toFixed(2))}`;
+// }
