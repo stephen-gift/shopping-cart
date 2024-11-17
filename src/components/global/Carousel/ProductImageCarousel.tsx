@@ -40,7 +40,7 @@ const ProductImageCarousel = ({ images }: ImageCarouselProps) => {
 
       {/* Thumbnails */}
       <Flex justifyContent="center" alignItems="center">
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} overflow={'auto'}>
           {images.map((imageUrl, index) => (
             <Image
               key={index}
