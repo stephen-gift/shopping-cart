@@ -2,10 +2,10 @@ import axios from "axios";
 import { Product } from "../../types/singleProduct";
 
 // Define the base URL and API key as constants
-const BASE_URL = process.env.TIMBU_BASE_URL;
-const ORGANIZATION_ID = process.env.TIMBU_ORGANIZATION_ID;
-const APPID = process.env.TIMBU_APPID;
-const APIKEY = process.env.TIMBU_APIKEY;
+const BASE_URL = process.env.NEXT_PUBLIC_TIMBU_BASE_URL;
+const ORGANIZATION_ID = process.env.NEXT_PUBLIC_TIMBU_ORGANIZATION_ID;
+const APPID = process.env.NEXT_PUBLIC_TIMBU_APPID;
+const APIKEY = process.env.NEXT_PUBLIC_TIMBU_APIKEY;
 
 // Function to fetch a specific product by ID
 export const fetchProductById = async (productId: string): Promise<Product> => {
